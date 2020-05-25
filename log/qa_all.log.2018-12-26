@@ -1,0 +1,132 @@
+[2018-12-26 10:46:19]: [test_cases.py] [INFO] [74] Precondition Fail ! test case getparentGroups-01 failed
+[2018-12-26 10:46:19]: [test_cases.py] [ERROR] [76] EOL while scanning string literal (<string>, line 1)
+Traceback (most recent call last):
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\cases\test_cases.py", line 68, in test_precondition
+    qc.exec_SQL_script("mssql", query=eval(request_param).get("sql") if request_param else None)
+  File "<string>", line 1
+    {"sql": "DELETE FROM [dbo].[IVH_CHANNEL_GROUP]
+                                                 ^
+SyntaxError: EOL while scanning string literal
+[2018-12-26 10:50:07]: [test_cases.py] [INFO] [74] Precondition Fail ! test case getparentGroups-01 failed
+[2018-12-26 10:50:07]: [test_cases.py] [ERROR] [76] exceptions must derive from BaseException
+Traceback (most recent call last):
+  File "src\pymssql.pyx", line 448, in pymssql.Cursor.execute
+  File "src\_mssql.pyx", line 1064, in _mssql.MSSQLConnection.execute_query
+  File "src\_mssql.pyx", line 1095, in _mssql.MSSQLConnection.execute_query
+  File "src\_mssql.pyx", line 1228, in _mssql.MSSQLConnection.format_and_run_query
+  File "src\_mssql.pyx", line 1639, in _mssql.check_cancel_and_raise
+  File "src\_mssql.pyx", line 1683, in _mssql.maybe_raise_MSSQLDatabaseException
+_mssql.MSSQLDatabaseException: (105, b"Unclosed quotation mark after the character string 'IVH_CHANNEL_GROUP'.DB-Lib error message 20018, severity 15:\nGeneral SQL Server error: Check messages from the SQL Server\nDB-Lib error message 20018, severity 15:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\ncsqa\qadatabasemssql.py", line 47, in execute_query
+    cursor.execute(query)
+  File "src\pymssql.pyx", line 468, in pymssql.Cursor.execute
+pymssql.OperationalError: (105, b"Unclosed quotation mark after the character string 'IVH_CHANNEL_GROUP'.DB-Lib error message 20018, severity 15:\nGeneral SQL Server error: Check messages from the SQL Server\nDB-Lib error message 20018, severity 15:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\cases\test_cases.py", line 68, in test_precondition
+    qc.exec_SQL_script("mssql", query=eval(request_param).get("sql") if request_param else None)
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 38, in exec_SQL_script
+    db.execute_query(query)
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\ncsqa\qadatabasemssql.py", line 50, in execute_query
+    raise (Exception, e)
+TypeError: exceptions must derive from BaseException
+[2018-12-26 10:51:56]: [test_cases.py] [INFO] [74] Precondition Fail ! test case getparentGroups-01 failed
+[2018-12-26 10:51:56]: [test_cases.py] [ERROR] [76] (105, b"Unclosed quotation mark after the character string 'IVH_CHANNEL_GROUP'.DB-Lib error message 20018, severity 15:\nGeneral SQL Server error: Check messages from the SQL Server\nDB-Lib error message 20018, severity 15:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+Traceback (most recent call last):
+  File "src\pymssql.pyx", line 448, in pymssql.Cursor.execute
+  File "src\_mssql.pyx", line 1064, in _mssql.MSSQLConnection.execute_query
+  File "src\_mssql.pyx", line 1095, in _mssql.MSSQLConnection.execute_query
+  File "src\_mssql.pyx", line 1228, in _mssql.MSSQLConnection.format_and_run_query
+  File "src\_mssql.pyx", line 1639, in _mssql.check_cancel_and_raise
+  File "src\_mssql.pyx", line 1683, in _mssql.maybe_raise_MSSQLDatabaseException
+_mssql.MSSQLDatabaseException: (105, b"Unclosed quotation mark after the character string 'IVH_CHANNEL_GROUP'.DB-Lib error message 20018, severity 15:\nGeneral SQL Server error: Check messages from the SQL Server\nDB-Lib error message 20018, severity 15:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\cases\test_cases.py", line 68, in test_precondition
+    qc.exec_SQL_script("mssql", query=eval(request_param).get("sql") if request_param else None)
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 38, in exec_SQL_script
+    db.execute_query(query)
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\ncsqa\qadatabasemssql.py", line 47, in execute_query
+    cursor.execute(query)
+  File "src\pymssql.pyx", line 468, in pymssql.Cursor.execute
+pymssql.OperationalError: (105, b"Unclosed quotation mark after the character string 'IVH_CHANNEL_GROUP'.DB-Lib error message 20018, severity 15:\nGeneral SQL Server error: Check messages from the SQL Server\nDB-Lib error message 20018, severity 15:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+[2018-12-26 11:35:50]: [test_cases.py] [INFO] [74] Precondition Fail ! test case getparentGroups-04 failed
+[2018-12-26 11:35:50]: [test_cases.py] [ERROR] [76] (515, b"Cannot insert the value NULL into column 'CREATED_DATE', table 'IVH_DB.dbo.IVH_CHANNEL_GROUP'; column does not allow nulls. INSERT fails.DB-Lib error message 20018, severity 16:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+Traceback (most recent call last):
+  File "src\pymssql.pyx", line 448, in pymssql.Cursor.execute
+  File "src\_mssql.pyx", line 1064, in _mssql.MSSQLConnection.execute_query
+  File "src\_mssql.pyx", line 1095, in _mssql.MSSQLConnection.execute_query
+  File "src\_mssql.pyx", line 1228, in _mssql.MSSQLConnection.format_and_run_query
+  File "src\_mssql.pyx", line 1639, in _mssql.check_cancel_and_raise
+  File "src\_mssql.pyx", line 1683, in _mssql.maybe_raise_MSSQLDatabaseException
+_mssql.MSSQLDatabaseException: (515, b"Cannot insert the value NULL into column 'CREATED_DATE', table 'IVH_DB.dbo.IVH_CHANNEL_GROUP'; column does not allow nulls. INSERT fails.DB-Lib error message 20018, severity 16:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\cases\test_cases.py", line 68, in test_precondition
+    qc.exec_SQL_script("mssql", query=eval(request_param).get("sql") if request_param else None)
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 38, in exec_SQL_script
+    db.execute_query(query)
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\ncsqa\qadatabasemssql.py", line 47, in execute_query
+    cursor.execute(query)
+  File "src\pymssql.pyx", line 467, in pymssql.Cursor.execute
+pymssql.IntegrityError: (515, b"Cannot insert the value NULL into column 'CREATED_DATE', table 'IVH_DB.dbo.IVH_CHANNEL_GROUP'; column does not allow nulls. INSERT fails.DB-Lib error message 20018, severity 16:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+[2018-12-26 13:31:40]: [test_cases.py] [INFO] [74] Precondition Fail ! test case getparentGroups-04 failed
+[2018-12-26 13:31:40]: [test_cases.py] [ERROR] [76] (515, b"Cannot insert the value NULL into column 'CREATED_DATE', table 'IVH_DB.dbo.IVH_CHANNEL_GROUP'; column does not allow nulls. INSERT fails.DB-Lib error message 20018, severity 16:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+Traceback (most recent call last):
+  File "src\pymssql.pyx", line 448, in pymssql.Cursor.execute
+  File "src\_mssql.pyx", line 1064, in _mssql.MSSQLConnection.execute_query
+  File "src\_mssql.pyx", line 1095, in _mssql.MSSQLConnection.execute_query
+  File "src\_mssql.pyx", line 1228, in _mssql.MSSQLConnection.format_and_run_query
+  File "src\_mssql.pyx", line 1639, in _mssql.check_cancel_and_raise
+  File "src\_mssql.pyx", line 1683, in _mssql.maybe_raise_MSSQLDatabaseException
+_mssql.MSSQLDatabaseException: (515, b"Cannot insert the value NULL into column 'CREATED_DATE', table 'IVH_DB.dbo.IVH_CHANNEL_GROUP'; column does not allow nulls. INSERT fails.DB-Lib error message 20018, severity 16:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\cases\test_cases.py", line 68, in test_precondition
+    qc.exec_SQL_script("mssql", query=eval(request_param).get("sql") if request_param else None)
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 38, in exec_SQL_script
+    db.execute_query(query)
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\ncsqa\qadatabasemssql.py", line 47, in execute_query
+    cursor.execute(query)
+  File "src\pymssql.pyx", line 467, in pymssql.Cursor.execute
+pymssql.IntegrityError: (515, b"Cannot insert the value NULL into column 'CREATED_DATE', table 'IVH_DB.dbo.IVH_CHANNEL_GROUP'; column does not allow nulls. INSERT fails.DB-Lib error message 20018, severity 16:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+[2018-12-26 13:31:41]: [test_cases.py] [INFO] [106] Cases Fail ! getparentGroups-06:this test case is to verify system is able to handle tampered data  in DB failed, the actual result is different with expected result
+[2018-12-26 13:31:41]: [test_cases.py] [ERROR] [108] Common validation is fail, the expected result is 500, but the actual result is 200
+[2018-12-26 13:31:41]: [test_cases.py] [INFO] [106] Cases Fail ! createGroup-01:this test case is to verify system is able to add group record into DB failed, the actual result is different with expected result
+[2018-12-26 13:31:41]: [test_cases.py] [ERROR] [108] Common validation is fail, the expected result is 200, but the actual result is 405
+[2018-12-26 13:32:29]: [test_cases.py] [INFO] [74] Precondition Fail ! test case getparentGroups-04 failed
+[2018-12-26 13:32:29]: [test_cases.py] [ERROR] [76] (515, b"Cannot insert the value NULL into column 'CREATED_DATE', table 'IVH_DB.dbo.IVH_CHANNEL_GROUP'; column does not allow nulls. INSERT fails.DB-Lib error message 20018, severity 16:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+Traceback (most recent call last):
+  File "src\pymssql.pyx", line 448, in pymssql.Cursor.execute
+  File "src\_mssql.pyx", line 1064, in _mssql.MSSQLConnection.execute_query
+  File "src\_mssql.pyx", line 1095, in _mssql.MSSQLConnection.execute_query
+  File "src\_mssql.pyx", line 1228, in _mssql.MSSQLConnection.format_and_run_query
+  File "src\_mssql.pyx", line 1639, in _mssql.check_cancel_and_raise
+  File "src\_mssql.pyx", line 1683, in _mssql.maybe_raise_MSSQLDatabaseException
+_mssql.MSSQLDatabaseException: (515, b"Cannot insert the value NULL into column 'CREATED_DATE', table 'IVH_DB.dbo.IVH_CHANNEL_GROUP'; column does not allow nulls. INSERT fails.DB-Lib error message 20018, severity 16:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\cases\test_cases.py", line 68, in test_precondition
+    qc.exec_SQL_script("mssql", query=eval(request_param).get("sql") if request_param else None)
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 38, in exec_SQL_script
+    db.execute_query(query)
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\ncsqa\qadatabasemssql.py", line 47, in execute_query
+    cursor.execute(query)
+  File "src\pymssql.pyx", line 467, in pymssql.Cursor.execute
+pymssql.IntegrityError: (515, b"Cannot insert the value NULL into column 'CREATED_DATE', table 'IVH_DB.dbo.IVH_CHANNEL_GROUP'; column does not allow nulls. INSERT fails.DB-Lib error message 20018, severity 16:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+[2018-12-26 13:32:31]: [test_cases.py] [INFO] [106] Cases Fail ! getparentGroups-06:this test case is to verify system is able to handle tampered data  in DB failed, the actual result is different with expected result
+[2018-12-26 13:32:31]: [test_cases.py] [ERROR] [108] Common validation is fail, the expected result is 500, but the actual result is 200

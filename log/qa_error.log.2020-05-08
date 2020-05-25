@@ -1,0 +1,73 @@
+[2020-05-08 09:47:44]: [test_cases.py] [ERROR] [120] invalid literal for int() with base 10: ''
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 105, in test_cases
+    specialvalidation.special_validation(case_id, case_type, response, expected_response, validation_query, expected_validation_result)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\specialvalidation.py", line 32, in special_validation
+    validate_add_or_update_or_delete(response, expected_response, validation_query, expected_validation_result)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\specialvalidation.py", line 125, in validate_add_or_update_or_delete
+    if len(data_result_database) != int(expected_validation_result):
+ValueError: invalid literal for int() with base 10: ''
+[2020-05-08 09:48:22]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-08 09:48:22]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-08 09:48:28]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-08 09:48:28]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-08 09:48:53]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-08 09:48:53]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-08 09:51:40]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-08 09:51:40]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-08 09:51:59]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-08 09:51:59]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-08 09:52:14]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-08 09:52:14]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-08 09:52:59]: [test_cases.py] [ERROR] [120] invalid literal for int() with base 10: ''
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 105, in test_cases
+    specialvalidation.special_validation(case_id, case_type, response, expected_response, validation_query, expected_validation_result)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\specialvalidation.py", line 32, in special_validation
+    validate_add_or_update_or_delete(response, expected_response, validation_query, expected_validation_result)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\specialvalidation.py", line 125, in validate_add_or_update_or_delete
+    if len(data_result_database) != int(expected_validation_result):
+ValueError: invalid literal for int() with base 10: ''
+[2020-05-08 09:52:59]: [test_cases.py] [ERROR] [120] invalid literal for int() with base 10: ''
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 105, in test_cases
+    specialvalidation.special_validation(case_id, case_type, response, expected_response, validation_query, expected_validation_result)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\specialvalidation.py", line 32, in special_validation
+    validate_add_or_update_or_delete(response, expected_response, validation_query, expected_validation_result)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\specialvalidation.py", line 125, in validate_add_or_update_or_delete
+    if len(data_result_database) != int(expected_validation_result):
+ValueError: invalid literal for int() with base 10: ''
+[2020-05-08 09:54:23]: [test_cases.py] [ERROR] [112] validate_add_or_update_or_delete validation for data is fail, the data saved in the database is not as per expected
+[2020-05-08 09:54:23]: [test_cases.py] [ERROR] [112] validate_add_or_update_or_delete validation for data is fail, the data saved in the database is not as per expected
+[2020-05-08 10:07:38]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-08 10:07:38]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-08 10:07:39]: [test_cases.py] [ERROR] [112] validate_add_or_update_or_delete validation for data is fail, the data saved in the database is not as per expected
+[2020-05-08 10:07:39]: [test_cases.py] [ERROR] [112] validate_add_or_update_or_delete validation for data is fail, the data saved in the database is not as per expected
+[2020-05-08 10:07:40]: [test_cases.py] [ERROR] [112] validate_add_or_update_or_delete validation for data is fail, the data saved in the database is not as per expected
+[2020-05-08 10:07:40]: [test_cases.py] [ERROR] [112] validate_add_or_update_or_delete validation for data is fail, the data saved in the database is not as per expected
+[2020-05-08 10:07:42]: [test_cases.py] [ERROR] [112] validate_add_or_update_or_delete validation for data is fail, the data saved in the database is not as per expected
+[2020-05-08 10:07:42]: [test_cases.py] [ERROR] [112] validate_add_or_update_or_delete validation for data is fail, the data saved in the database is not as per expected
+[2020-05-08 10:15:00]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-08 10:15:00]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-08 10:20:26]: [test_cases.py] [ERROR] [112] validate_add_or_update_or_delete validation for data is fail, the data saved in the database is not as per expected
+[2020-05-08 10:20:26]: [test_cases.py] [ERROR] [112] validate_add_or_update_or_delete validation for data is fail, the data saved in the database is not as per expected
+[2020-05-08 10:44:16]: [test_cases.py] [ERROR] [112] validate_add_or_update_or_delete validation for data is fail, the data saved in the database is not as per expected
+[2020-05-08 10:44:16]: [test_cases.py] [ERROR] [112] validate_add_or_update_or_delete validation for data is fail, the data saved in the database is not as per expected
+[2020-05-08 11:03:49]: [test_cases.py] [ERROR] [120] name 'null' is not defined
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 101, in test_cases
+    comvalidation.common_validation(response, expected_statuscd, expected_response)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\comvalidation.py", line 10, in common_validation
+    expected_response_status = int(eval(expected_response).get("status"))
+  File "<string>", line 3, in <module>
+NameError: name 'null' is not defined
+[2020-05-08 11:03:49]: [test_cases.py] [ERROR] [120] name 'null' is not defined
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 101, in test_cases
+    comvalidation.common_validation(response, expected_statuscd, expected_response)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\comvalidation.py", line 10, in common_validation
+    expected_response_status = int(eval(expected_response).get("status"))
+  File "<string>", line 3, in <module>
+NameError: name 'null' is not defined
+[2020-05-08 11:04:52]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-08 11:04:52]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 200, but the actual status is 400

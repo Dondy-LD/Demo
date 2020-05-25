@@ -1,0 +1,463 @@
+[2020-05-07 14:06:52]: [test_cases.py] [ERROR] [112] validate_psize validation for message is fail, the expected result is {
+      "status": 200,
+      "message": "Saved successfully.",
+      "rel": True
+}, but the actual result is {'status': 400, 'message': 'An error has occurred, please contact the administrator. Reference ID: e2b5acda-266f-4520-9707-0b5945b7c0a8'}
+[2020-05-07 14:08:02]: [test_cases.py] [ERROR] [120] join() argument must be str or bytes, not 'NoneType'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 96, in test_cases
+    swapper=eval(swapper) if swapper else None, indicator=indicator if indicator else None)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 50, in __init__
+    filepath = os.path.join(tc.PROJECT_DIR, "data", "upload", files.get("file"))
+  File "D:\py3.7.6\lib\ntpath.py", line 115, in join
+    genericpath._check_arg_types('join', path, *paths)
+  File "D:\py3.7.6\lib\genericpath.py", line 153, in _check_arg_types
+    (funcname, s.__class__.__name__)) from None
+TypeError: join() argument must be str or bytes, not 'NoneType'
+[2020-05-07 14:08:02]: [test_cases.py] [ERROR] [120] join() argument must be str or bytes, not 'NoneType'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 96, in test_cases
+    swapper=eval(swapper) if swapper else None, indicator=indicator if indicator else None)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 50, in __init__
+    filepath = os.path.join(tc.PROJECT_DIR, "data", "upload", files.get("file"))
+  File "D:\py3.7.6\lib\ntpath.py", line 115, in join
+    genericpath._check_arg_types('join', path, *paths)
+  File "D:\py3.7.6\lib\genericpath.py", line 153, in _check_arg_types
+    (funcname, s.__class__.__name__)) from None
+TypeError: join() argument must be str or bytes, not 'NoneType'
+[2020-05-07 14:08:33]: [test_cases.py] [ERROR] [112] validate_psize validation for message is fail, the expected result is {
+      "status": 200,
+      "message": "Saved successfully.",
+      "rel": True
+}, but the actual result is {'status': 400, 'message': 'An error has occurred, please contact the administrator. Reference ID: e58fa4a7-5bb1-412c-a8c2-42cd67e05f0a'}
+[2020-05-07 14:08:33]: [test_cases.py] [ERROR] [112] validate_psize validation for message is fail, the expected result is {
+      "status": 200,
+      "message": "Saved successfully.",
+      "rel": True
+}, but the actual result is {'status': 400, 'message': 'An error has occurred, please contact the administrator. Reference ID: e58fa4a7-5bb1-412c-a8c2-42cd67e05f0a'}
+[2020-05-07 14:09:50]: [test_cases.py] [ERROR] [112] validate_psize validation for message is fail, the expected result is {
+      'status': 400, 
+      'message': 'An error has occurred, please contact the administrator. Reference ID: e58fa4a7-5bb1-412c-a8c2-42cd67e05f0a'}, but the actual result is {'status': 400, 'message': 'An error has occurred, please contact the administrator. Reference ID: 1877b118-d42f-4d1a-be6c-d5c9ad24417a'}
+[2020-05-07 14:09:50]: [test_cases.py] [ERROR] [112] validate_psize validation for message is fail, the expected result is {
+      'status': 400, 
+      'message': 'An error has occurred, please contact the administrator. Reference ID: e58fa4a7-5bb1-412c-a8c2-42cd67e05f0a'}, but the actual result is {'status': 400, 'message': 'An error has occurred, please contact the administrator. Reference ID: 1877b118-d42f-4d1a-be6c-d5c9ad24417a'}
+[2020-05-07 14:10:50]: [test_cases.py] [ERROR] [112] validate_psize validation for message is fail, the expected result is {
+      'status': 400, 
+      'message': 'An error has occurred, please contact the administrator. Reference ID: e58fa4a7-5bb1-412c-a8c2-42cd67e05f0a'}, but the actual result is {'status': 400, 'message': 'An error has occurred, please contact the administrator. Reference ID: df19d34c-7a8a-46fc-94ad-1a58b2c04212'}
+[2020-05-07 14:10:50]: [test_cases.py] [ERROR] [112] validate_psize validation for message is fail, the expected result is {
+      'status': 400, 
+      'message': 'An error has occurred, please contact the administrator. Reference ID: e58fa4a7-5bb1-412c-a8c2-42cd67e05f0a'}, but the actual result is {'status': 400, 'message': 'An error has occurred, please contact the administrator. Reference ID: df19d34c-7a8a-46fc-94ad-1a58b2c04212'}
+[2020-05-07 14:12:00]: [test_cases.py] [ERROR] [112] validate_psize validation for message is fail, the expected result is {
+    'status': 400, 
+    'message': 'An error has occurred, please contact the administrator. Reference ID: e58fa4a7-5bb1-412c-a8c2-42cd67e05f0a'
+}, but the actual result is {'status': 400, 'message': 'An error has occurred, please contact the administrator. Reference ID: ea33f9ba-2ceb-4f83-a7c0-48b20c92b317'}
+[2020-05-07 14:12:00]: [test_cases.py] [ERROR] [112] validate_psize validation for message is fail, the expected result is {
+    'status': 400, 
+    'message': 'An error has occurred, please contact the administrator. Reference ID: e58fa4a7-5bb1-412c-a8c2-42cd67e05f0a'
+}, but the actual result is {'status': 400, 'message': 'An error has occurred, please contact the administrator. Reference ID: ea33f9ba-2ceb-4f83-a7c0-48b20c92b317'}
+[2020-05-07 14:12:35]: [test_cases.py] [ERROR] [112] validate_psize validation for message is fail, the expected result is {
+    "status": 400, 
+    "message": "An error has occurred, please contact the administrator. Reference ID: e58fa4a7-5bb1-412c-a8c2-42cd67e05f0a"
+}, but the actual result is {'status': 400, 'message': 'An error has occurred, please contact the administrator. Reference ID: 2b2912df-5e70-4c75-98ac-bbb9daa65f43'}
+[2020-05-07 14:12:35]: [test_cases.py] [ERROR] [112] validate_psize validation for message is fail, the expected result is {
+    "status": 400, 
+    "message": "An error has occurred, please contact the administrator. Reference ID: e58fa4a7-5bb1-412c-a8c2-42cd67e05f0a"
+}, but the actual result is {'status': 400, 'message': 'An error has occurred, please contact the administrator. Reference ID: 2b2912df-5e70-4c75-98ac-bbb9daa65f43'}
+[2020-05-07 14:13:00]: [test_cases.py] [ERROR] [112] validate_psize validation for message is fail, the expected response message is blank, but the actual response is {'status': 400, 'message': 'An error has occurred, please contact the administrator. Reference ID: b01100c8-78ce-4bbe-aaab-0c05ecada335'}
+[2020-05-07 14:13:00]: [test_cases.py] [ERROR] [112] validate_psize validation for message is fail, the expected response message is blank, but the actual response is {'status': 400, 'message': 'An error has occurred, please contact the administrator. Reference ID: b01100c8-78ce-4bbe-aaab-0c05ecada335'}
+[2020-05-07 14:14:49]: [test_cases.py] [ERROR] [112] validate_psize validation for message is fail, the expected result is {
+      "status": 400,
+      "message": "An error has occurred, please contact the administrator. Reference ID: e58fa4a7-5bb1-412c-a8c2-42cd67e05f0a"
+}, but the actual result is {'status': 400, 'message': 'An error has occurred, please contact the administrator. Reference ID: 28607bf8-56a2-4a01-9be3-9686f7c9470f'}
+[2020-05-07 14:14:49]: [test_cases.py] [ERROR] [112] validate_psize validation for message is fail, the expected result is {
+      "status": 400,
+      "message": "An error has occurred, please contact the administrator. Reference ID: e58fa4a7-5bb1-412c-a8c2-42cd67e05f0a"
+}, but the actual result is {'status': 400, 'message': 'An error has occurred, please contact the administrator. Reference ID: 28607bf8-56a2-4a01-9be3-9686f7c9470f'}
+[2020-05-07 14:29:31]: [test_cases.py] [ERROR] [120] Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 101, in test_cases
+    comvalidation.common_validation(response, expected_statuscd, expected_response)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\comvalidation.py", line 16, in common_validation
+    post_status = response.responsejson.get("status")
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 81, in responsejson
+    return self._response.json()
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\requests\models.py", line 892, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "D:\py3.7.6\lib\json\__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "D:\py3.7.6\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\py3.7.6\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[2020-05-07 14:29:31]: [test_cases.py] [ERROR] [120] Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 101, in test_cases
+    comvalidation.common_validation(response, expected_statuscd, expected_response)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\comvalidation.py", line 16, in common_validation
+    post_status = response.responsejson.get("status")
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 81, in responsejson
+    return self._response.json()
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\requests\models.py", line 892, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "D:\py3.7.6\lib\json\__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "D:\py3.7.6\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\py3.7.6\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[2020-05-07 14:37:27]: [test_cases.py] [ERROR] [120] 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 101, in test_cases
+    comvalidation.common_validation(response, expected_statuscd, expected_response)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\comvalidation.py", line 17, in common_validation
+    expected_response_status = int(expected_response.get("status"))
+AttributeError: 'str' object has no attribute 'get'
+[2020-05-07 14:37:27]: [test_cases.py] [ERROR] [120] 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 101, in test_cases
+    comvalidation.common_validation(response, expected_statuscd, expected_response)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\comvalidation.py", line 17, in common_validation
+    expected_response_status = int(expected_response.get("status"))
+AttributeError: 'str' object has no attribute 'get'
+[2020-05-07 14:37:28]: [test_cases.py] [ERROR] [120] 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 101, in test_cases
+    comvalidation.common_validation(response, expected_statuscd, expected_response)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\comvalidation.py", line 17, in common_validation
+    expected_response_status = int(expected_response.get("status"))
+AttributeError: 'str' object has no attribute 'get'
+[2020-05-07 14:37:28]: [test_cases.py] [ERROR] [120] 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 101, in test_cases
+    comvalidation.common_validation(response, expected_statuscd, expected_response)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\comvalidation.py", line 17, in common_validation
+    expected_response_status = int(expected_response.get("status"))
+AttributeError: 'str' object has no attribute 'get'
+[2020-05-07 14:37:28]: [test_cases.py] [ERROR] [120] 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 101, in test_cases
+    comvalidation.common_validation(response, expected_statuscd, expected_response)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\comvalidation.py", line 17, in common_validation
+    expected_response_status = int(expected_response.get("status"))
+AttributeError: 'str' object has no attribute 'get'
+[2020-05-07 14:37:28]: [test_cases.py] [ERROR] [120] 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 101, in test_cases
+    comvalidation.common_validation(response, expected_statuscd, expected_response)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\comvalidation.py", line 17, in common_validation
+    expected_response_status = int(expected_response.get("status"))
+AttributeError: 'str' object has no attribute 'get'
+[2020-05-07 14:37:28]: [test_cases.py] [ERROR] [120] 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 101, in test_cases
+    comvalidation.common_validation(response, expected_statuscd, expected_response)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\comvalidation.py", line 17, in common_validation
+    expected_response_status = int(expected_response.get("status"))
+AttributeError: 'str' object has no attribute 'get'
+[2020-05-07 14:37:28]: [test_cases.py] [ERROR] [120] 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 101, in test_cases
+    comvalidation.common_validation(response, expected_statuscd, expected_response)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\comvalidation.py", line 17, in common_validation
+    expected_response_status = int(expected_response.get("status"))
+AttributeError: 'str' object has no attribute 'get'
+[2020-05-07 14:37:28]: [test_cases.py] [ERROR] [120] 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 101, in test_cases
+    comvalidation.common_validation(response, expected_statuscd, expected_response)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\comvalidation.py", line 17, in common_validation
+    expected_response_status = int(expected_response.get("status"))
+AttributeError: 'str' object has no attribute 'get'
+[2020-05-07 14:37:28]: [test_cases.py] [ERROR] [120] 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 101, in test_cases
+    comvalidation.common_validation(response, expected_statuscd, expected_response)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\comvalidation.py", line 17, in common_validation
+    expected_response_status = int(expected_response.get("status"))
+AttributeError: 'str' object has no attribute 'get'
+[2020-05-07 14:37:29]: [test_cases.py] [ERROR] [120] 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 101, in test_cases
+    comvalidation.common_validation(response, expected_statuscd, expected_response)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\comvalidation.py", line 17, in common_validation
+    expected_response_status = int(expected_response.get("status"))
+AttributeError: 'str' object has no attribute 'get'
+[2020-05-07 14:37:29]: [test_cases.py] [ERROR] [120] 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 101, in test_cases
+    comvalidation.common_validation(response, expected_statuscd, expected_response)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\comvalidation.py", line 17, in common_validation
+    expected_response_status = int(expected_response.get("status"))
+AttributeError: 'str' object has no attribute 'get'
+[2020-05-07 14:37:29]: [test_cases.py] [ERROR] [120] 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 101, in test_cases
+    comvalidation.common_validation(response, expected_statuscd, expected_response)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\comvalidation.py", line 17, in common_validation
+    expected_response_status = int(expected_response.get("status"))
+AttributeError: 'str' object has no attribute 'get'
+[2020-05-07 14:37:29]: [test_cases.py] [ERROR] [120] 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 101, in test_cases
+    comvalidation.common_validation(response, expected_statuscd, expected_response)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\comvalidation.py", line 17, in common_validation
+    expected_response_status = int(expected_response.get("status"))
+AttributeError: 'str' object has no attribute 'get'
+[2020-05-07 14:37:29]: [test_cases.py] [ERROR] [120] 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 101, in test_cases
+    comvalidation.common_validation(response, expected_statuscd, expected_response)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\comvalidation.py", line 17, in common_validation
+    expected_response_status = int(expected_response.get("status"))
+AttributeError: 'str' object has no attribute 'get'
+[2020-05-07 14:37:29]: [test_cases.py] [ERROR] [120] 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 101, in test_cases
+    comvalidation.common_validation(response, expected_statuscd, expected_response)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\comvalidation.py", line 17, in common_validation
+    expected_response_status = int(expected_response.get("status"))
+AttributeError: 'str' object has no attribute 'get'
+[2020-05-07 14:37:30]: [test_cases.py] [ERROR] [120] 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 101, in test_cases
+    comvalidation.common_validation(response, expected_statuscd, expected_response)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\comvalidation.py", line 17, in common_validation
+    expected_response_status = int(expected_response.get("status"))
+AttributeError: 'str' object has no attribute 'get'
+[2020-05-07 14:37:30]: [test_cases.py] [ERROR] [120] 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 101, in test_cases
+    comvalidation.common_validation(response, expected_statuscd, expected_response)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\comvalidation.py", line 17, in common_validation
+    expected_response_status = int(expected_response.get("status"))
+AttributeError: 'str' object has no attribute 'get'
+[2020-05-07 14:37:30]: [test_cases.py] [ERROR] [120] 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 101, in test_cases
+    comvalidation.common_validation(response, expected_statuscd, expected_response)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\comvalidation.py", line 17, in common_validation
+    expected_response_status = int(expected_response.get("status"))
+AttributeError: 'str' object has no attribute 'get'
+[2020-05-07 14:37:30]: [test_cases.py] [ERROR] [120] 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 101, in test_cases
+    comvalidation.common_validation(response, expected_statuscd, expected_response)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\comvalidation.py", line 17, in common_validation
+    expected_response_status = int(expected_response.get("status"))
+AttributeError: 'str' object has no attribute 'get'
+[2020-05-07 14:37:30]: [test_cases.py] [ERROR] [120] 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 101, in test_cases
+    comvalidation.common_validation(response, expected_statuscd, expected_response)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\comvalidation.py", line 17, in common_validation
+    expected_response_status = int(expected_response.get("status"))
+AttributeError: 'str' object has no attribute 'get'
+[2020-05-07 14:37:30]: [test_cases.py] [ERROR] [120] 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 101, in test_cases
+    comvalidation.common_validation(response, expected_statuscd, expected_response)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\comvalidation.py", line 17, in common_validation
+    expected_response_status = int(expected_response.get("status"))
+AttributeError: 'str' object has no attribute 'get'
+[2020-05-07 14:37:30]: [test_cases.py] [ERROR] [120] 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 101, in test_cases
+    comvalidation.common_validation(response, expected_statuscd, expected_response)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\comvalidation.py", line 17, in common_validation
+    expected_response_status = int(expected_response.get("status"))
+AttributeError: 'str' object has no attribute 'get'
+[2020-05-07 14:37:30]: [test_cases.py] [ERROR] [120] 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 101, in test_cases
+    comvalidation.common_validation(response, expected_statuscd, expected_response)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\comvalidation.py", line 17, in common_validation
+    expected_response_status = int(expected_response.get("status"))
+AttributeError: 'str' object has no attribute 'get'
+[2020-05-07 14:37:31]: [test_cases.py] [ERROR] [120] 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 101, in test_cases
+    comvalidation.common_validation(response, expected_statuscd, expected_response)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\comvalidation.py", line 17, in common_validation
+    expected_response_status = int(expected_response.get("status"))
+AttributeError: 'str' object has no attribute 'get'
+[2020-05-07 14:37:31]: [test_cases.py] [ERROR] [120] 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 101, in test_cases
+    comvalidation.common_validation(response, expected_statuscd, expected_response)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\comvalidation.py", line 17, in common_validation
+    expected_response_status = int(expected_response.get("status"))
+AttributeError: 'str' object has no attribute 'get'
+[2020-05-07 14:55:24]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected result g is 200, but the actual result g is 400
+[2020-05-07 14:55:24]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected result g is 200, but the actual result g is 400
+[2020-05-07 14:55:24]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected result g is 200, but the actual result g is 400
+[2020-05-07 14:55:24]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected result g is 200, but the actual result g is 400
+[2020-05-07 16:58:26]: [test_cases.py] [ERROR] [120] object of type 'bool' has no len()
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 105, in test_cases
+    specialvalidation.special_validation(case_type, response, expected_response, validation_query, expected_validation_result)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\specialvalidation.py", line 39, in special_validation
+    validate_search_key_filed(case_type, response, expected_response, validation_query)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\specialvalidation.py", line 179, in validate_search_key_filed
+    for index in range(int(len(key_filed_value) / temp)):
+TypeError: object of type 'bool' has no len()
+[2020-05-07 16:58:26]: [test_cases.py] [ERROR] [120] object of type 'bool' has no len()
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 105, in test_cases
+    specialvalidation.special_validation(case_type, response, expected_response, validation_query, expected_validation_result)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\specialvalidation.py", line 39, in special_validation
+    validate_search_key_filed(case_type, response, expected_response, validation_query)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\specialvalidation.py", line 179, in validate_search_key_filed
+    for index in range(int(len(key_filed_value) / temp)):
+TypeError: object of type 'bool' has no len()
+[2020-05-07 16:59:32]: [test_cases.py] [ERROR] [120] object of type 'bool' has no len()
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 105, in test_cases
+    specialvalidation.special_validation(case_type, response, expected_response, validation_query, expected_validation_result)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\specialvalidation.py", line 39, in special_validation
+    validate_search_key_filed(case_type, response, expected_response, validation_query)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\specialvalidation.py", line 179, in validate_search_key_filed
+    for index in range(int(len(key_filed_value) / temp)):
+TypeError: object of type 'bool' has no len()
+[2020-05-07 16:59:32]: [test_cases.py] [ERROR] [120] object of type 'bool' has no len()
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 105, in test_cases
+    specialvalidation.special_validation(case_type, response, expected_response, validation_query, expected_validation_result)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\specialvalidation.py", line 39, in special_validation
+    validate_search_key_filed(case_type, response, expected_response, validation_query)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\specialvalidation.py", line 179, in validate_search_key_filed
+    for index in range(int(len(key_filed_value) / temp)):
+TypeError: object of type 'bool' has no len()
+[2020-05-07 17:34:57]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-07 17:34:57]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-07 17:34:58]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-07 17:34:58]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-07 17:34:58]: [test_cases.py] [ERROR] [120] name 'a' is not defined
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 91, in test_cases
+    headers=eval(request_param).get("headers") if request_param else None,
+  File "<string>", line 2, in <module>
+NameError: name 'a' is not defined
+[2020-05-07 17:34:58]: [test_cases.py] [ERROR] [120] name 'a' is not defined
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 91, in test_cases
+    headers=eval(request_param).get("headers") if request_param else None,
+  File "<string>", line 2, in <module>
+NameError: name 'a' is not defined
+[2020-05-07 17:34:58]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-07 17:34:58]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-07 17:34:58]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-07 17:34:58]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-07 17:34:59]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-07 17:34:59]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-07 17:36:00]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-07 17:36:00]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-07 17:36:00]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-07 17:36:00]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-07 17:36:00]: [test_cases.py] [ERROR] [120] name 'a' is not defined
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 91, in test_cases
+    headers=eval(request_param).get("headers") if request_param else None,
+  File "<string>", line 2, in <module>
+NameError: name 'a' is not defined
+[2020-05-07 17:36:00]: [test_cases.py] [ERROR] [120] name 'a' is not defined
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 91, in test_cases
+    headers=eval(request_param).get("headers") if request_param else None,
+  File "<string>", line 2, in <module>
+NameError: name 'a' is not defined
+[2020-05-07 17:36:00]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-07 17:36:00]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-07 17:36:01]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-07 17:36:01]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-07 17:36:01]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-07 17:36:01]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-07 17:40:13]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-07 17:40:13]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-07 17:40:13]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-07 17:40:13]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-07 17:40:13]: [test_cases.py] [ERROR] [120] name 'a' is not defined
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 91, in test_cases
+    headers=eval(request_param).get("headers") if request_param else None,
+  File "<string>", line 2, in <module>
+NameError: name 'a' is not defined
+[2020-05-07 17:40:13]: [test_cases.py] [ERROR] [120] name 'a' is not defined
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 91, in test_cases
+    headers=eval(request_param).get("headers") if request_param else None,
+  File "<string>", line 2, in <module>
+NameError: name 'a' is not defined
+[2020-05-07 17:40:13]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-07 17:40:13]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-07 17:40:14]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-07 17:40:14]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-07 17:40:14]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-07 17:40:14]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-07 17:40:38]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-07 17:40:38]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-07 17:40:38]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-07 17:40:38]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-07 17:40:38]: [test_cases.py] [ERROR] [120] name 'a' is not defined
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 91, in test_cases
+    headers=eval(request_param).get("headers") if request_param else None,
+  File "<string>", line 2, in <module>
+NameError: name 'a' is not defined
+[2020-05-07 17:40:38]: [test_cases.py] [ERROR] [120] name 'a' is not defined
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 91, in test_cases
+    headers=eval(request_param).get("headers") if request_param else None,
+  File "<string>", line 2, in <module>
+NameError: name 'a' is not defined
+[2020-05-07 17:40:39]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-07 17:40:39]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-07 17:40:39]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-07 17:40:39]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-07 17:40:39]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-07 17:40:39]: [test_cases.py] [ERROR] [112] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-07 17:49:28]: [test_cases.py] [ERROR] [120] special_validation() missing 1 required positional argument: 'expected_validation_result'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 105, in test_cases
+    specialvalidation.special_validation(case_type, response, expected_response, validation_query, expected_validation_result)
+TypeError: special_validation() missing 1 required positional argument: 'expected_validation_result'
+[2020-05-07 17:49:28]: [test_cases.py] [ERROR] [120] special_validation() missing 1 required positional argument: 'expected_validation_result'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 105, in test_cases
+    specialvalidation.special_validation(case_type, response, expected_response, validation_query, expected_validation_result)
+TypeError: special_validation() missing 1 required positional argument: 'expected_validation_result'
+[2020-05-07 17:57:11]: [test_cases.py] [ERROR] [120] Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 101, in test_cases
+    comvalidation.common_validation(response, expected_statuscd, expected_response)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\comvalidation.py", line 9, in common_validation
+    post_status = response.responsejson.get("status")
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 81, in responsejson
+    return self._response.json()
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\requests\models.py", line 892, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "D:\py3.7.6\lib\json\__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "D:\py3.7.6\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\py3.7.6\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[2020-05-07 17:57:11]: [test_cases.py] [ERROR] [120] Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 101, in test_cases
+    comvalidation.common_validation(response, expected_statuscd, expected_response)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\comvalidation.py", line 9, in common_validation
+    post_status = response.responsejson.get("status")
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 81, in responsejson
+    return self._response.json()
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\requests\models.py", line 892, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "D:\py3.7.6\lib\json\__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "D:\py3.7.6\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\py3.7.6\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)

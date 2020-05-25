@@ -1,0 +1,30 @@
+[2020-05-25 19:20:36]: [test_cases.py] [INFO] [69] Precondition Fail ! test case saveDeviceIcon-01 failed
+[2020-05-25 19:20:36]: [test_cases.py] [ERROR] [71] [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 59, in test_precondition
+    eval(field_value), tc.data_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 42, in update_testdata_for_data_preparation
+    datac.update_value_to_excel(pendingupdate, datapath)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qadatacentral.py", line 207, in update_value_to_excel
+    new_excel.save(excel_path)
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\Workbook.py", line 710, in save
+    doc.save(filename_or_stream, self.get_biff_data())
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\CompoundDoc.py", line 262, in save
+    f = open(file_name_or_filelike_obj, 'w+b')
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+[2020-05-25 19:20:51]: [test_cases.py] [INFO] [65] Precondition Pass ! test case saveDeviceIcon-01 passed
+[2020-05-25 19:20:51]: [test_cases.py] [INFO] [65] Precondition Pass ! test case saveDeviceIcon-01 passed
+[2020-05-25 19:28:37]: [test_cases.py] [INFO] [65] Precondition Pass ! test case saveDeviceIcon-01 passed
+[2020-05-25 19:28:37]: [test_cases.py] [INFO] [65] Precondition Pass ! test case saveDeviceIcon-01 passed
+[2020-05-25 19:29:55]: [test_cases.py] [INFO] [65] Precondition Pass ! test case saveDeviceIcon-01 passed
+[2020-05-25 19:29:55]: [test_cases.py] [INFO] [65] Precondition Pass ! test case saveDeviceIcon-01 passed
+[2020-05-25 19:30:01]: [test_cases.py] [INFO] [65] Precondition Pass ! test case saveDeviceIcon-01 passed
+[2020-05-25 19:30:01]: [test_cases.py] [INFO] [65] Precondition Pass ! test case saveDeviceIcon-01 passed
+[2020-05-25 19:33:31]: [test_cases.py] [INFO] [65] Precondition Pass ! test case saveDeviceIcon-01 passed
+[2020-05-25 19:33:31]: [test_cases.py] [INFO] [65] Precondition Pass ! test case saveDeviceIcon-01 passed
+[2020-05-25 19:33:36]: [test_cases.py] [INFO] [65] Precondition Pass ! test case saveDeviceIcon-01 passed
+[2020-05-25 19:33:36]: [test_cases.py] [INFO] [65] Precondition Pass ! test case saveDeviceIcon-01 passed
+[2020-05-25 19:47:51]: [test_cases.py] [INFO] [65] Precondition Pass ! test case saveDeviceIcon-01 passed
+[2020-05-25 19:47:51]: [test_cases.py] [INFO] [65] Precondition Pass ! test case saveDeviceIcon-01 passed
+[2020-05-25 19:47:56]: [test_cases.py] [INFO] [65] Precondition Pass ! test case saveDeviceIcon-01 passed
+[2020-05-25 19:47:56]: [test_cases.py] [INFO] [65] Precondition Pass ! test case saveDeviceIcon-01 passed

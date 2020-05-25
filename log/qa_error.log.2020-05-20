@@ -1,0 +1,270 @@
+[2020-05-20 10:36:17]: [test_cases.py] [ERROR] [132] unexpected EOF while parsing (<string>, line 0)
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 79, in test_cases
+    new_swapper = eval(swapper)  # read data form database to replace the request data
+  File "<string>", line 0
+    
+    ^
+SyntaxError: unexpected EOF while parsing
+[2020-05-20 10:38:12]: [test_cases.py] [ERROR] [132] unexpected EOF while parsing (<string>, line 0)
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 79, in test_cases
+    new_swapper = eval(swapper)  # read data form database to replace the request data
+  File "<string>", line 0
+    
+    ^
+SyntaxError: unexpected EOF while parsing
+[2020-05-20 10:38:12]: [test_cases.py] [ERROR] [132] unexpected EOF while parsing (<string>, line 0)
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 79, in test_cases
+    new_swapper = eval(swapper)  # read data form database to replace the request data
+  File "<string>", line 0
+    
+    ^
+SyntaxError: unexpected EOF while parsing
+[2020-05-20 10:38:32]: [test_cases.py] [ERROR] [132] unexpected EOF while parsing (<string>, line 0)
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 79, in test_cases
+    new_swapper = eval(swapper)  # read data form database to replace the request data
+  File "<string>", line 0
+    
+    ^
+SyntaxError: unexpected EOF while parsing
+[2020-05-20 10:38:32]: [test_cases.py] [ERROR] [132] unexpected EOF while parsing (<string>, line 0)
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 79, in test_cases
+    new_swapper = eval(swapper)  # read data form database to replace the request data
+  File "<string>", line 0
+    
+    ^
+SyntaxError: unexpected EOF while parsing
+[2020-05-20 10:41:03]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-20 10:41:03]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-20 10:43:59]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-20 10:43:59]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-20 11:26:30]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-20 11:26:30]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-20 11:31:24]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-20 11:31:24]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-20 13:22:46]: [test_cases.py] [ERROR] [132] [Errno 2] No such file or directory: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\upload\\uploadDeviceIcon-01.jpg'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 108, in test_cases
+    indicator=indicator if indicator else None)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 51, in __init__
+    self._files = {'file': open(filepath, "rb")}
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\upload\\uploadDeviceIcon-01.jpg'
+[2020-05-20 13:22:46]: [test_cases.py] [ERROR] [132] [Errno 2] No such file or directory: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\upload\\uploadDeviceIcon-01.jpg'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 108, in test_cases
+    indicator=indicator if indicator else None)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 51, in __init__
+    self._files = {'file': open(filepath, "rb")}
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\upload\\uploadDeviceIcon-01.jpg'
+[2020-05-20 13:23:25]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-20 13:23:25]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-20 15:10:02]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-20 15:10:02]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-20 15:14:19]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-20 15:14:19]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-20 15:15:22]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-20 15:15:22]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-20 15:20:33]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-20 15:20:33]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-20 15:46:50]: [test_cases.py] [ERROR] [132] [Errno 2] No such file or directory: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\upload\\uploadDeviceIcon-02.jpg'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 108, in test_cases
+    indicator=indicator if indicator else None)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 53, in __init__
+    self._files = {'file': (tempfilename, open(filepath, "rb"), 'image/png')}
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\upload\\uploadDeviceIcon-02.jpg'
+[2020-05-20 15:46:50]: [test_cases.py] [ERROR] [132] [Errno 2] No such file or directory: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\upload\\uploadDeviceIcon-02.jpg'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 108, in test_cases
+    indicator=indicator if indicator else None)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 53, in __init__
+    self._files = {'file': (tempfilename, open(filepath, "rb"), 'image/png')}
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\upload\\uploadDeviceIcon-02.jpg'
+[2020-05-20 17:20:54]: [test_cases.py] [ERROR] [132] 'InterFace' object has no attribute 'form_data'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 108, in test_cases
+    indicator=indicator if indicator else None)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 69, in __init__
+    self._response = requests.post(self._path, data=self._data, form_data=self.form_data,
+AttributeError: 'InterFace' object has no attribute 'form_data'
+[2020-05-20 17:20:54]: [test_cases.py] [ERROR] [132] 'InterFace' object has no attribute 'form_data'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 108, in test_cases
+    indicator=indicator if indicator else None)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 69, in __init__
+    self._response = requests.post(self._path, data=self._data, form_data=self.form_data,
+AttributeError: 'InterFace' object has no attribute 'form_data'
+[2020-05-20 17:20:54]: [test_cases.py] [ERROR] [132] 'InterFace' object has no attribute 'form_data'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 108, in test_cases
+    indicator=indicator if indicator else None)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 69, in __init__
+    self._response = requests.post(self._path, data=self._data, form_data=self.form_data,
+AttributeError: 'InterFace' object has no attribute 'form_data'
+[2020-05-20 17:20:54]: [test_cases.py] [ERROR] [132] 'InterFace' object has no attribute 'form_data'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 108, in test_cases
+    indicator=indicator if indicator else None)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 69, in __init__
+    self._response = requests.post(self._path, data=self._data, form_data=self.form_data,
+AttributeError: 'InterFace' object has no attribute 'form_data'
+[2020-05-20 17:22:02]: [test_cases.py] [ERROR] [132] 'InterFace' object has no attribute 'form_data'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 108, in test_cases
+    indicator=indicator if indicator else None)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 69, in __init__
+    self._response = requests.post(self._path, data=self._data, form_data=self.form_data,
+AttributeError: 'InterFace' object has no attribute 'form_data'
+[2020-05-20 17:22:02]: [test_cases.py] [ERROR] [132] 'InterFace' object has no attribute 'form_data'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 108, in test_cases
+    indicator=indicator if indicator else None)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 69, in __init__
+    self._response = requests.post(self._path, data=self._data, form_data=self.form_data,
+AttributeError: 'InterFace' object has no attribute 'form_data'
+[2020-05-20 17:22:02]: [test_cases.py] [ERROR] [132] 'InterFace' object has no attribute 'form_data'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 108, in test_cases
+    indicator=indicator if indicator else None)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 69, in __init__
+    self._response = requests.post(self._path, data=self._data, form_data=self.form_data,
+AttributeError: 'InterFace' object has no attribute 'form_data'
+[2020-05-20 17:22:02]: [test_cases.py] [ERROR] [132] 'InterFace' object has no attribute 'form_data'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 108, in test_cases
+    indicator=indicator if indicator else None)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 69, in __init__
+    self._response = requests.post(self._path, data=self._data, form_data=self.form_data,
+AttributeError: 'InterFace' object has no attribute 'form_data'
+[2020-05-20 17:23:41]: [test_cases.py] [ERROR] [132] request() got an unexpected keyword argument 'form_data'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 108, in test_cases
+    indicator=indicator if indicator else None)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 70, in __init__
+    json=self._json, files=self._files, headers=self._headers)
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\requests\api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+TypeError: request() got an unexpected keyword argument 'form_data'
+[2020-05-20 17:23:41]: [test_cases.py] [ERROR] [132] request() got an unexpected keyword argument 'form_data'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 108, in test_cases
+    indicator=indicator if indicator else None)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 70, in __init__
+    json=self._json, files=self._files, headers=self._headers)
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\requests\api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+TypeError: request() got an unexpected keyword argument 'form_data'
+[2020-05-20 17:23:41]: [test_cases.py] [ERROR] [132] request() got an unexpected keyword argument 'form_data'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 108, in test_cases
+    indicator=indicator if indicator else None)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 70, in __init__
+    json=self._json, files=self._files, headers=self._headers)
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\requests\api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+TypeError: request() got an unexpected keyword argument 'form_data'
+[2020-05-20 17:23:41]: [test_cases.py] [ERROR] [132] request() got an unexpected keyword argument 'form_data'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 108, in test_cases
+    indicator=indicator if indicator else None)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 70, in __init__
+    json=self._json, files=self._files, headers=self._headers)
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\requests\api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+TypeError: request() got an unexpected keyword argument 'form_data'
+[2020-05-20 17:26:09]: [test_cases.py] [ERROR] [132] request() got an unexpected keyword argument 'form_data'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 108, in test_cases
+    indicator=indicator if indicator else None)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 70, in __init__
+    json=self._json, files=self._files, headers=self._headers)
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\requests\api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+TypeError: request() got an unexpected keyword argument 'form_data'
+[2020-05-20 17:26:09]: [test_cases.py] [ERROR] [132] request() got an unexpected keyword argument 'form_data'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 108, in test_cases
+    indicator=indicator if indicator else None)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 70, in __init__
+    json=self._json, files=self._files, headers=self._headers)
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\requests\api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+TypeError: request() got an unexpected keyword argument 'form_data'
+[2020-05-20 17:26:09]: [test_cases.py] [ERROR] [132] request() got an unexpected keyword argument 'form_data'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 108, in test_cases
+    indicator=indicator if indicator else None)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 70, in __init__
+    json=self._json, files=self._files, headers=self._headers)
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\requests\api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+TypeError: request() got an unexpected keyword argument 'form_data'
+[2020-05-20 17:26:09]: [test_cases.py] [ERROR] [132] request() got an unexpected keyword argument 'form_data'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 108, in test_cases
+    indicator=indicator if indicator else None)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 70, in __init__
+    json=self._json, files=self._files, headers=self._headers)
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\requests\api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+TypeError: request() got an unexpected keyword argument 'form_data'
+[2020-05-20 18:11:47]: [test_cases.py] [ERROR] [132] name 'null' is not defined
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 102, in test_cases
+    headers=eval(request_param).get("headers") if request_param else None,
+  File "<string>", line 2, in <module>
+NameError: name 'null' is not defined
+[2020-05-20 18:11:47]: [test_cases.py] [ERROR] [132] name 'null' is not defined
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 102, in test_cases
+    headers=eval(request_param).get("headers") if request_param else None,
+  File "<string>", line 2, in <module>
+NameError: name 'null' is not defined
+[2020-05-20 18:14:21]: [test_cases.py] [ERROR] [132] invalid literal for int() with base 10: ''
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 113, in test_cases
+    comvalidation.common_validation(response, expected_statuscd, expected_response)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\comvalidation.py", line 5, in common_validation
+    if response.httpstatuscd != int(expectedstatuscd):
+ValueError: invalid literal for int() with base 10: ''
+[2020-05-20 18:14:21]: [test_cases.py] [ERROR] [132] invalid literal for int() with base 10: ''
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 113, in test_cases
+    comvalidation.common_validation(response, expected_statuscd, expected_response)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\comvalidation.py", line 5, in common_validation
+    if response.httpstatuscd != int(expectedstatuscd):
+ValueError: invalid literal for int() with base 10: ''
+[2020-05-20 18:20:13]: [test_cases.py] [ERROR] [133] invalid literal for int() with base 10: ''
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 114, in test_cases
+    comvalidation.common_validation(response, expected_statuscd, expected_response)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\comvalidation.py", line 5, in common_validation
+    if response.httpstatuscd != int(expectedstatuscd):
+ValueError: invalid literal for int() with base 10: ''
+[2020-05-20 18:20:13]: [test_cases.py] [ERROR] [133] invalid literal for int() with base 10: ''
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 114, in test_cases
+    comvalidation.common_validation(response, expected_statuscd, expected_response)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\comvalidation.py", line 5, in common_validation
+    if response.httpstatuscd != int(expectedstatuscd):
+ValueError: invalid literal for int() with base 10: ''

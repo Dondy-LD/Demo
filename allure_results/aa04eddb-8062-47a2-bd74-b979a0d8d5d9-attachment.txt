@@ -1,0 +1,3 @@
+connectionpool.py          208 DEBUG    Starting new HTTP connection (1): 172.16.35.218
+connectionpool.py          396 DEBUG    http://172.16.35.218:8807 "POST /vms/device/deviceIcon/save HTTP/1.1" 200 None
+test_cases.py              110 DEBUG    the response for case saveDeviceIcon-01 is {"status":200,"message":"Success","data":{"createdId":"superadmin","lastUpdatedId":"superadmin","createdDate":"2020-05-25T11:33:39.802+0000","lastUpdatedDate":"2020-05-25T11:33:39.802+0000","version":0,"iconId":"217ad772-f483-4885-953c-56738cc0ccdb","modelId":"hikvision-ipc","status":"I","iconUri":"e8242188-4b7c-4502-8ae6-012d6f3a378c.png","modelName":"Hikvision IP Camera"},"rel":true}

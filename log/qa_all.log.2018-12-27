@@ -1,0 +1,678 @@
+[2018-12-27 13:57:49]: [test_cases.py] [INFO] [74] Precondition Fail ! test case getparentGroups-04 failed
+[2018-12-27 13:57:49]: [test_cases.py] [ERROR] [76] (515, b"Cannot insert the value NULL into column 'CREATED_DATE', table 'IVH_DB.dbo.IVH_CHANNEL_GROUP'; column does not allow nulls. INSERT fails.DB-Lib error message 20018, severity 16:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+Traceback (most recent call last):
+  File "src\pymssql.pyx", line 448, in pymssql.Cursor.execute
+  File "src\_mssql.pyx", line 1064, in _mssql.MSSQLConnection.execute_query
+  File "src\_mssql.pyx", line 1095, in _mssql.MSSQLConnection.execute_query
+  File "src\_mssql.pyx", line 1228, in _mssql.MSSQLConnection.format_and_run_query
+  File "src\_mssql.pyx", line 1639, in _mssql.check_cancel_and_raise
+  File "src\_mssql.pyx", line 1683, in _mssql.maybe_raise_MSSQLDatabaseException
+_mssql.MSSQLDatabaseException: (515, b"Cannot insert the value NULL into column 'CREATED_DATE', table 'IVH_DB.dbo.IVH_CHANNEL_GROUP'; column does not allow nulls. INSERT fails.DB-Lib error message 20018, severity 16:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\cases\test_cases.py", line 68, in test_precondition
+    qc.exec_SQL_script("mssql", query=eval(request_param).get("sql") if request_param else None)
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 38, in exec_SQL_script
+    db.execute_query(query)
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\ncsqa\qadatabasemssql.py", line 47, in execute_query
+    cursor.execute(query)
+  File "src\pymssql.pyx", line 467, in pymssql.Cursor.execute
+pymssql.IntegrityError: (515, b"Cannot insert the value NULL into column 'CREATED_DATE', table 'IVH_DB.dbo.IVH_CHANNEL_GROUP'; column does not allow nulls. INSERT fails.DB-Lib error message 20018, severity 16:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+[2018-12-27 13:57:52]: [test_cases.py] [INFO] [114] Cases Fail ! getparentGroups-01:this test case is to verify system return parent group info of a channel successfully if no records in DB failed,  some error hit in test scripts, please contact QA team for more help!
+[2018-12-27 13:57:52]: [test_cases.py] [ERROR] [116] HTTPConnectionPool(host='172.16.35.218', port=8802): Max retries exceeded with url: /vms/channel/parentGroups (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002C94048A7F0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+Traceback (most recent call last):
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\http\client.py", line 1229, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\http\client.py", line 1275, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\http\client.py", line 1224, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\http\client.py", line 1016, in _send_output
+    self.send(msg)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\http\client.py", line 956, in send
+    self.connect()
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000002C94048A7F0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\adapters.py", line 440, in send
+    timeout=timeout
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='172.16.35.218', port=8802): Max retries exceeded with url: /vms/channel/parentGroups (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002C94048A7F0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\cases\test_cases.py", line 92, in test_cases
+    swapper=eval(swapper) if swapper else None, indicator=indicator if indicator else None)
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 50, in __init__
+    self._response = requests.get(self._path, params=self._param, headers=self._headers)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\api.py", line 72, in get
+    return request('get', url, params=params, **kwargs)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='172.16.35.218', port=8802): Max retries exceeded with url: /vms/channel/parentGroups (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002C94048A7F0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+[2018-12-27 13:57:54]: [test_cases.py] [INFO] [114] Cases Fail ! getparentGroups-02:this test case is to verify system return parent group info of a channel successfully failed,  some error hit in test scripts, please contact QA team for more help!
+[2018-12-27 13:57:54]: [test_cases.py] [ERROR] [116] HTTPConnectionPool(host='172.16.35.218', port=8802): Max retries exceeded with url: /vms/channel/parentGroups (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002C9405D41D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+Traceback (most recent call last):
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\http\client.py", line 1229, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\http\client.py", line 1275, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\http\client.py", line 1224, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\http\client.py", line 1016, in _send_output
+    self.send(msg)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\http\client.py", line 956, in send
+    self.connect()
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000002C9405D41D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\adapters.py", line 440, in send
+    timeout=timeout
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='172.16.35.218', port=8802): Max retries exceeded with url: /vms/channel/parentGroups (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002C9405D41D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\cases\test_cases.py", line 92, in test_cases
+    swapper=eval(swapper) if swapper else None, indicator=indicator if indicator else None)
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 50, in __init__
+    self._response = requests.get(self._path, params=self._param, headers=self._headers)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\api.py", line 72, in get
+    return request('get', url, params=params, **kwargs)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='172.16.35.218', port=8802): Max retries exceeded with url: /vms/channel/parentGroups (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002C9405D41D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+[2018-12-27 13:57:55]: [test_cases.py] [INFO] [114] Cases Fail ! getparentGroups-03:this test case is to verify system return multiple parent group info of a channel successfully failed,  some error hit in test scripts, please contact QA team for more help!
+[2018-12-27 13:57:55]: [test_cases.py] [ERROR] [116] HTTPConnectionPool(host='172.16.35.218', port=8802): Max retries exceeded with url: /vms/channel/parentGroups (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002C940915828>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+Traceback (most recent call last):
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\http\client.py", line 1229, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\http\client.py", line 1275, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\http\client.py", line 1224, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\http\client.py", line 1016, in _send_output
+    self.send(msg)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\http\client.py", line 956, in send
+    self.connect()
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000002C940915828>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\adapters.py", line 440, in send
+    timeout=timeout
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='172.16.35.218', port=8802): Max retries exceeded with url: /vms/channel/parentGroups (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002C940915828>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\cases\test_cases.py", line 92, in test_cases
+    swapper=eval(swapper) if swapper else None, indicator=indicator if indicator else None)
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 50, in __init__
+    self._response = requests.get(self._path, params=self._param, headers=self._headers)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\api.py", line 72, in get
+    return request('get', url, params=params, **kwargs)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='172.16.35.218', port=8802): Max retries exceeded with url: /vms/channel/parentGroups (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002C940915828>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+[2018-12-27 13:57:57]: [test_cases.py] [INFO] [114] Cases Fail ! getparentGroups-04:this test case is to verify system return parent group info of a channel successfully when only necessary field stored in DB failed,  some error hit in test scripts, please contact QA team for more help!
+[2018-12-27 13:57:57]: [test_cases.py] [ERROR] [116] HTTPConnectionPool(host='172.16.35.218', port=8802): Max retries exceeded with url: /vms/channel/parentGroups (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002C940922B70>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+Traceback (most recent call last):
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\http\client.py", line 1229, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\http\client.py", line 1275, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\http\client.py", line 1224, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\http\client.py", line 1016, in _send_output
+    self.send(msg)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\http\client.py", line 956, in send
+    self.connect()
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000002C940922B70>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\adapters.py", line 440, in send
+    timeout=timeout
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='172.16.35.218', port=8802): Max retries exceeded with url: /vms/channel/parentGroups (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002C940922B70>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\cases\test_cases.py", line 92, in test_cases
+    swapper=eval(swapper) if swapper else None, indicator=indicator if indicator else None)
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 50, in __init__
+    self._response = requests.get(self._path, params=self._param, headers=self._headers)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\api.py", line 72, in get
+    return request('get', url, params=params, **kwargs)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='172.16.35.218', port=8802): Max retries exceeded with url: /vms/channel/parentGroups (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002C940922B70>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+[2018-12-27 13:57:58]: [test_cases.py] [INFO] [114] Cases Fail ! getparentGroups-05:this test case is to verify system return parent group info of a channel successfully when only necessary field stored in DB failed,  some error hit in test scripts, please contact QA team for more help!
+[2018-12-27 13:57:58]: [test_cases.py] [ERROR] [116] HTTPConnectionPool(host='172.16.35.218', port=8802): Max retries exceeded with url: /vms/channel/parentGroups (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002C94089C208>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+Traceback (most recent call last):
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\http\client.py", line 1229, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\http\client.py", line 1275, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\http\client.py", line 1224, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\http\client.py", line 1016, in _send_output
+    self.send(msg)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\http\client.py", line 956, in send
+    self.connect()
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000002C94089C208>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\adapters.py", line 440, in send
+    timeout=timeout
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='172.16.35.218', port=8802): Max retries exceeded with url: /vms/channel/parentGroups (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002C94089C208>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\cases\test_cases.py", line 92, in test_cases
+    swapper=eval(swapper) if swapper else None, indicator=indicator if indicator else None)
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 50, in __init__
+    self._response = requests.get(self._path, params=self._param, headers=self._headers)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\api.py", line 72, in get
+    return request('get', url, params=params, **kwargs)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='172.16.35.218', port=8802): Max retries exceeded with url: /vms/channel/parentGroups (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002C94089C208>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+[2018-12-27 13:58:00]: [test_cases.py] [INFO] [114] Cases Fail ! getparentGroups-06:this test case is to verify system is able to handle tampered data  in DB failed,  some error hit in test scripts, please contact QA team for more help!
+[2018-12-27 13:58:00]: [test_cases.py] [ERROR] [116] HTTPConnectionPool(host='172.16.35.218', port=8802): Max retries exceeded with url: /vms/channel/parentGroups (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002C940B097F0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+Traceback (most recent call last):
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\http\client.py", line 1229, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\http\client.py", line 1275, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\http\client.py", line 1224, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\http\client.py", line 1016, in _send_output
+    self.send(msg)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\http\client.py", line 956, in send
+    self.connect()
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000002C940B097F0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\adapters.py", line 440, in send
+    timeout=timeout
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='172.16.35.218', port=8802): Max retries exceeded with url: /vms/channel/parentGroups (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002C940B097F0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\cases\test_cases.py", line 92, in test_cases
+    swapper=eval(swapper) if swapper else None, indicator=indicator if indicator else None)
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 50, in __init__
+    self._response = requests.get(self._path, params=self._param, headers=self._headers)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\api.py", line 72, in get
+    return request('get', url, params=params, **kwargs)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='172.16.35.218', port=8802): Max retries exceeded with url: /vms/channel/parentGroups (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002C940B097F0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+[2018-12-27 13:58:01]: [test_cases.py] [INFO] [114] Cases Fail ! createGroup-01:this test case is to verify system is able to add group record into DB failed,  some error hit in test scripts, please contact QA team for more help!
+[2018-12-27 13:58:01]: [test_cases.py] [ERROR] [116] HTTPConnectionPool(host='172.16.35.218', port=8802): Max retries exceeded with url: /vms/channel/createGroup (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002C940CAA240>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+Traceback (most recent call last):
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\http\client.py", line 1229, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\http\client.py", line 1275, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\http\client.py", line 1224, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\http\client.py", line 1016, in _send_output
+    self.send(msg)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\http\client.py", line 956, in send
+    self.connect()
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000002C940CAA240>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\adapters.py", line 440, in send
+    timeout=timeout
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='172.16.35.218', port=8802): Max retries exceeded with url: /vms/channel/createGroup (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002C940CAA240>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\cases\test_cases.py", line 92, in test_cases
+    swapper=eval(swapper) if swapper else None, indicator=indicator if indicator else None)
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 52, in __init__
+    self._response = requests.post(self._path, data=self._data, json=self._json, headers=self._headers)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='172.16.35.218', port=8802): Max retries exceeded with url: /vms/channel/createGroup (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002C940CAA240>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+[2018-12-27 14:09:53]: [test_cases.py] [INFO] [74] Precondition Fail ! test case getparentGroups-04 failed
+[2018-12-27 14:09:53]: [test_cases.py] [ERROR] [76] (515, b"Cannot insert the value NULL into column 'CREATED_DATE', table 'IVH_DB.dbo.IVH_CHANNEL_GROUP'; column does not allow nulls. INSERT fails.DB-Lib error message 20018, severity 16:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+Traceback (most recent call last):
+  File "src\pymssql.pyx", line 448, in pymssql.Cursor.execute
+  File "src\_mssql.pyx", line 1064, in _mssql.MSSQLConnection.execute_query
+  File "src\_mssql.pyx", line 1095, in _mssql.MSSQLConnection.execute_query
+  File "src\_mssql.pyx", line 1228, in _mssql.MSSQLConnection.format_and_run_query
+  File "src\_mssql.pyx", line 1639, in _mssql.check_cancel_and_raise
+  File "src\_mssql.pyx", line 1683, in _mssql.maybe_raise_MSSQLDatabaseException
+_mssql.MSSQLDatabaseException: (515, b"Cannot insert the value NULL into column 'CREATED_DATE', table 'IVH_DB.dbo.IVH_CHANNEL_GROUP'; column does not allow nulls. INSERT fails.DB-Lib error message 20018, severity 16:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\cases\test_cases.py", line 68, in test_precondition
+    qc.exec_SQL_script("mssql", query=eval(request_param).get("sql") if request_param else None)
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 38, in exec_SQL_script
+    db.execute_query(query)
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\ncsqa\qadatabasemssql.py", line 47, in execute_query
+    cursor.execute(query)
+  File "src\pymssql.pyx", line 467, in pymssql.Cursor.execute
+pymssql.IntegrityError: (515, b"Cannot insert the value NULL into column 'CREATED_DATE', table 'IVH_DB.dbo.IVH_CHANNEL_GROUP'; column does not allow nulls. INSERT fails.DB-Lib error message 20018, severity 16:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+[2018-12-27 14:09:54]: [test_cases.py] [INFO] [106] Cases Fail ! getparentGroups-06:this test case is to verify system is able to handle tampered data  in DB failed, the actual result is different with expected result
+[2018-12-27 14:09:54]: [test_cases.py] [ERROR] [108] Common validation is fail, the expected result is 500, but the actual result is 200
+[2018-12-27 14:11:24]: [test_cases.py] [INFO] [74] Precondition Fail ! test case getparentGroups-04 failed
+[2018-12-27 14:11:24]: [test_cases.py] [ERROR] [76] (515, b"Cannot insert the value NULL into column 'CREATED_DATE', table 'IVH_DB.dbo.IVH_CHANNEL_GROUP'; column does not allow nulls. INSERT fails.DB-Lib error message 20018, severity 16:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+Traceback (most recent call last):
+  File "src\pymssql.pyx", line 448, in pymssql.Cursor.execute
+  File "src\_mssql.pyx", line 1064, in _mssql.MSSQLConnection.execute_query
+  File "src\_mssql.pyx", line 1095, in _mssql.MSSQLConnection.execute_query
+  File "src\_mssql.pyx", line 1228, in _mssql.MSSQLConnection.format_and_run_query
+  File "src\_mssql.pyx", line 1639, in _mssql.check_cancel_and_raise
+  File "src\_mssql.pyx", line 1683, in _mssql.maybe_raise_MSSQLDatabaseException
+_mssql.MSSQLDatabaseException: (515, b"Cannot insert the value NULL into column 'CREATED_DATE', table 'IVH_DB.dbo.IVH_CHANNEL_GROUP'; column does not allow nulls. INSERT fails.DB-Lib error message 20018, severity 16:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\cases\test_cases.py", line 68, in test_precondition
+    qc.exec_SQL_script("mssql", query=eval(request_param).get("sql") if request_param else None)
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 38, in exec_SQL_script
+    db.execute_query(query)
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\ncsqa\qadatabasemssql.py", line 47, in execute_query
+    cursor.execute(query)
+  File "src\pymssql.pyx", line 467, in pymssql.Cursor.execute
+pymssql.IntegrityError: (515, b"Cannot insert the value NULL into column 'CREATED_DATE', table 'IVH_DB.dbo.IVH_CHANNEL_GROUP'; column does not allow nulls. INSERT fails.DB-Lib error message 20018, severity 16:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+[2018-12-27 14:11:25]: [test_cases.py] [INFO] [106] Cases Fail ! getparentGroups-06:this test case is to verify system is able to handle tampered data  in DB failed, the actual result is different with expected result
+[2018-12-27 14:11:25]: [test_cases.py] [ERROR] [108] Common validation is fail, the expected result is 500, but the actual result is 200
+[2018-12-27 14:12:26]: [test_cases.py] [INFO] [74] Precondition Fail ! test case getparentGroups-04 failed
+[2018-12-27 14:12:26]: [test_cases.py] [ERROR] [76] (515, b"Cannot insert the value NULL into column 'CREATED_DATE', table 'IVH_DB.dbo.IVH_CHANNEL_GROUP'; column does not allow nulls. INSERT fails.DB-Lib error message 20018, severity 16:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+Traceback (most recent call last):
+  File "src\pymssql.pyx", line 448, in pymssql.Cursor.execute
+  File "src\_mssql.pyx", line 1064, in _mssql.MSSQLConnection.execute_query
+  File "src\_mssql.pyx", line 1095, in _mssql.MSSQLConnection.execute_query
+  File "src\_mssql.pyx", line 1228, in _mssql.MSSQLConnection.format_and_run_query
+  File "src\_mssql.pyx", line 1639, in _mssql.check_cancel_and_raise
+  File "src\_mssql.pyx", line 1683, in _mssql.maybe_raise_MSSQLDatabaseException
+_mssql.MSSQLDatabaseException: (515, b"Cannot insert the value NULL into column 'CREATED_DATE', table 'IVH_DB.dbo.IVH_CHANNEL_GROUP'; column does not allow nulls. INSERT fails.DB-Lib error message 20018, severity 16:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\cases\test_cases.py", line 68, in test_precondition
+    qc.exec_SQL_script("mssql", query=eval(request_param).get("sql") if request_param else None)
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 38, in exec_SQL_script
+    db.execute_query(query)
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\ncsqa\qadatabasemssql.py", line 46, in execute_query
+    cursor.execute(query)
+  File "src\pymssql.pyx", line 467, in pymssql.Cursor.execute
+pymssql.IntegrityError: (515, b"Cannot insert the value NULL into column 'CREATED_DATE', table 'IVH_DB.dbo.IVH_CHANNEL_GROUP'; column does not allow nulls. INSERT fails.DB-Lib error message 20018, severity 16:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+[2018-12-27 14:12:34]: [test_cases.py] [INFO] [106] Cases Fail ! getparentGroups-06:this test case is to verify system is able to handle tampered data  in DB failed, the actual result is different with expected result
+[2018-12-27 14:12:34]: [test_cases.py] [ERROR] [108] Common validation is fail, the expected result is 500, but the actual result is 200
+[2018-12-27 14:33:57]: [test_cases.py] [INFO] [74] Precondition Fail ! test case getparentGroups-02 failed
+[2018-12-27 14:33:57]: [test_cases.py] [ERROR] [76] (2627, b"Violation of PRIMARY KEY constraint 'PK_IVH_CHANNEL_GROUP'. Cannot insert duplicate key in object 'dbo.IVH_CHANNEL_GROUP'. The duplicate key value is (09549f75-7385-426d-9f69-8d4be97406fb).DB-Lib error message 20018, severity 14:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+Traceback (most recent call last):
+  File "src\pymssql.pyx", line 448, in pymssql.Cursor.execute
+  File "src\_mssql.pyx", line 1064, in _mssql.MSSQLConnection.execute_query
+  File "src\_mssql.pyx", line 1095, in _mssql.MSSQLConnection.execute_query
+  File "src\_mssql.pyx", line 1228, in _mssql.MSSQLConnection.format_and_run_query
+  File "src\_mssql.pyx", line 1639, in _mssql.check_cancel_and_raise
+  File "src\_mssql.pyx", line 1683, in _mssql.maybe_raise_MSSQLDatabaseException
+_mssql.MSSQLDatabaseException: (2627, b"Violation of PRIMARY KEY constraint 'PK_IVH_CHANNEL_GROUP'. Cannot insert duplicate key in object 'dbo.IVH_CHANNEL_GROUP'. The duplicate key value is (09549f75-7385-426d-9f69-8d4be97406fb).DB-Lib error message 20018, severity 14:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\cases\test_cases.py", line 68, in test_precondition
+    qc.exec_SQL_script("mssql", query=eval(request_param).get("sql") if request_param else None)
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 38, in exec_SQL_script
+    db.execute_query(query)
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\ncsqa\qadatabasemssql.py", line 46, in execute_query
+    cursor.execute(query)
+  File "src\pymssql.pyx", line 467, in pymssql.Cursor.execute
+pymssql.IntegrityError: (2627, b"Violation of PRIMARY KEY constraint 'PK_IVH_CHANNEL_GROUP'. Cannot insert duplicate key in object 'dbo.IVH_CHANNEL_GROUP'. The duplicate key value is (09549f75-7385-426d-9f69-8d4be97406fb).DB-Lib error message 20018, severity 14:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+[2018-12-27 14:34:09]: [test_cases.py] [INFO] [74] Precondition Fail ! test case getparentGroups-02 failed
+[2018-12-27 14:34:09]: [test_cases.py] [ERROR] [76] (2627, b"Violation of PRIMARY KEY constraint 'PK_IVH_CHANNEL_GROUP'. Cannot insert duplicate key in object 'dbo.IVH_CHANNEL_GROUP'. The duplicate key value is (09549f75-7385-426d-9f69-8d4be97406fb).DB-Lib error message 20018, severity 14:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+Traceback (most recent call last):
+  File "src\pymssql.pyx", line 448, in pymssql.Cursor.execute
+  File "src\_mssql.pyx", line 1064, in _mssql.MSSQLConnection.execute_query
+  File "src\_mssql.pyx", line 1095, in _mssql.MSSQLConnection.execute_query
+  File "src\_mssql.pyx", line 1228, in _mssql.MSSQLConnection.format_and_run_query
+  File "src\_mssql.pyx", line 1639, in _mssql.check_cancel_and_raise
+  File "src\_mssql.pyx", line 1683, in _mssql.maybe_raise_MSSQLDatabaseException
+_mssql.MSSQLDatabaseException: (2627, b"Violation of PRIMARY KEY constraint 'PK_IVH_CHANNEL_GROUP'. Cannot insert duplicate key in object 'dbo.IVH_CHANNEL_GROUP'. The duplicate key value is (09549f75-7385-426d-9f69-8d4be97406fb).DB-Lib error message 20018, severity 14:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\cases\test_cases.py", line 68, in test_precondition
+    qc.exec_SQL_script("mssql", query=eval(request_param).get("sql") if request_param else None)
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 38, in exec_SQL_script
+    db.execute_query(query)
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\ncsqa\qadatabasemssql.py", line 46, in execute_query
+    cursor.execute(query)
+  File "src\pymssql.pyx", line 467, in pymssql.Cursor.execute
+pymssql.IntegrityError: (2627, b"Violation of PRIMARY KEY constraint 'PK_IVH_CHANNEL_GROUP'. Cannot insert duplicate key in object 'dbo.IVH_CHANNEL_GROUP'. The duplicate key value is (09549f75-7385-426d-9f69-8d4be97406fb).DB-Lib error message 20018, severity 14:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+[2018-12-27 14:39:33]: [test_cases.py] [INFO] [114] Cases Fail ! updateGroup-01:this test case is to verify system is able to update group record into DB failed,  some error hit in test scripts, please contact QA team for more help!
+[2018-12-27 14:39:33]: [test_cases.py] [ERROR] [116] Failed to parse: 172.16.35.218:8802 
+Traceback (most recent call last):
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\models.py", line 371, in prepare_url
+    scheme, auth, host, port, path, query, fragment = parse_url(url)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\util\url.py", line 199, in parse_url
+    raise LocationParseError(url)
+urllib3.exceptions.LocationParseError: Failed to parse: 172.16.35.218:8802 
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\cases\test_cases.py", line 92, in test_cases
+    swapper=eval(swapper) if swapper else None, indicator=indicator if indicator else None)
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 52, in __init__
+    self._response = requests.post(self._path, data=self._data, json=self._json, headers=self._headers)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\sessions.py", line 494, in request
+    prep = self.prepare_request(req)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\sessions.py", line 437, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\models.py", line 305, in prepare
+    self.prepare_url(url, params)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\models.py", line 373, in prepare_url
+    raise InvalidURL(*e.args)
+requests.exceptions.InvalidURL: Failed to parse: 172.16.35.218:8802 
+[2018-12-27 14:46:25]: [test_cases.py] [INFO] [114] Cases Fail ! updateGroup-01:this test case is to verify system is able to update group record into DB failed,  some error hit in test scripts, please contact QA team for more help!
+[2018-12-27 14:46:25]: [test_cases.py] [ERROR] [116] invalid syntax (<string>, line 5)
+Traceback (most recent call last):
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\cases\test_cases.py", line 88, in test_cases
+    headers=eval(request_param).get("headers") if request_param else None,
+  File "<string>", line 5
+    status": "A",
+             ^
+SyntaxError: invalid syntax
+[2018-12-27 14:48:07]: [test_cases.py] [INFO] [114] Cases Fail ! updateGroup-01:this test case is to verify system is able to update group record into DB failed,  some error hit in test scripts, please contact QA team for more help!
+[2018-12-27 14:48:07]: [test_cases.py] [ERROR] [116] name 'NULL' is not defined
+Traceback (most recent call last):
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\cases\test_cases.py", line 88, in test_cases
+    headers=eval(request_param).get("headers") if request_param else None,
+  File "<string>", line 2, in <module>
+NameError: name 'NULL' is not defined
+[2018-12-27 15:05:59]: [test_cases.py] [INFO] [106] Cases Fail ! updateGroup-05:this test case is to verify system is able to handle update group record into DB with special simbol in the string failed, the actual result is different with expected result
+[2018-12-27 15:05:59]: [test_cases.py] [ERROR] [108] Common validation is fail, the expected result is 500, but the actual result is 200
+[2018-12-27 15:06:53]: [test_cases.py] [INFO] [106] Cases Fail ! updateGroup-06:this test case is to verify system is able to handle update group record into DB with partial necessary field failed, the actual result is different with expected result
+[2018-12-27 15:06:53]: [test_cases.py] [ERROR] [108] Common validation is fail, the expected result is 500, but the actual result is 200
+[2018-12-27 15:08:11]: [test_cases.py] [INFO] [106] Cases Fail ! updateGroup-07:this test case is to verify system is able to handle update group record but no body value  failed, the actual result is different with expected result
+[2018-12-27 15:08:11]: [test_cases.py] [ERROR] [108] Common validation is fail, the expected result is 500, but the actual result is 200
+[2018-12-27 15:59:16]: [test_cases.py] [INFO] [106] Cases Fail ! updateGroup-07:this test case is to verify system is able to handle update group record but no body value  failed, the actual result is different with expected result
+[2018-12-27 15:59:16]: [test_cases.py] [ERROR] [108] Common validation is fail, the expected result is 500, but the actual result is 200
+[2018-12-27 17:57:06]: [test_cases.py] [INFO] [74] Precondition Fail ! test case getparentGroups-02 failed
+[2018-12-27 17:57:06]: [test_cases.py] [ERROR] [76] (2627, b"Violation of PRIMARY KEY constraint 'PK_IVH_CHANNEL_GROUP'. Cannot insert duplicate key in object 'dbo.IVH_CHANNEL_GROUP'. The duplicate key value is (00002).DB-Lib error message 20018, severity 14:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+Traceback (most recent call last):
+  File "src\pymssql.pyx", line 448, in pymssql.Cursor.execute
+  File "src\_mssql.pyx", line 1064, in _mssql.MSSQLConnection.execute_query
+  File "src\_mssql.pyx", line 1095, in _mssql.MSSQLConnection.execute_query
+  File "src\_mssql.pyx", line 1228, in _mssql.MSSQLConnection.format_and_run_query
+  File "src\_mssql.pyx", line 1639, in _mssql.check_cancel_and_raise
+  File "src\_mssql.pyx", line 1683, in _mssql.maybe_raise_MSSQLDatabaseException
+_mssql.MSSQLDatabaseException: (2627, b"Violation of PRIMARY KEY constraint 'PK_IVH_CHANNEL_GROUP'. Cannot insert duplicate key in object 'dbo.IVH_CHANNEL_GROUP'. The duplicate key value is (00002).DB-Lib error message 20018, severity 14:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\cases\test_cases.py", line 68, in test_precondition
+    qc.exec_SQL_script("mssql", query=eval(request_param).get("sql") if request_param else None)
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 38, in exec_SQL_script
+    db.execute_query(query)
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\ncsqa\qadatabasemssql.py", line 46, in execute_query
+    cursor.execute(query)
+  File "src\pymssql.pyx", line 467, in pymssql.Cursor.execute
+pymssql.IntegrityError: (2627, b"Violation of PRIMARY KEY constraint 'PK_IVH_CHANNEL_GROUP'. Cannot insert duplicate key in object 'dbo.IVH_CHANNEL_GROUP'. The duplicate key value is (00002).DB-Lib error message 20018, severity 14:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+[2018-12-27 18:05:17]: [test_cases.py] [INFO] [74] Precondition Fail ! test case getparentGroups-02 failed
+[2018-12-27 18:05:17]: [test_cases.py] [ERROR] [76] (2627, b"Violation of PRIMARY KEY constraint 'PK_IVH_CHANNEL_GROUP'. Cannot insert duplicate key in object 'dbo.IVH_CHANNEL_GROUP'. The duplicate key value is (00002).DB-Lib error message 20018, severity 14:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+Traceback (most recent call last):
+  File "src\pymssql.pyx", line 448, in pymssql.Cursor.execute
+  File "src\_mssql.pyx", line 1064, in _mssql.MSSQLConnection.execute_query
+  File "src\_mssql.pyx", line 1095, in _mssql.MSSQLConnection.execute_query
+  File "src\_mssql.pyx", line 1228, in _mssql.MSSQLConnection.format_and_run_query
+  File "src\_mssql.pyx", line 1639, in _mssql.check_cancel_and_raise
+  File "src\_mssql.pyx", line 1683, in _mssql.maybe_raise_MSSQLDatabaseException
+_mssql.MSSQLDatabaseException: (2627, b"Violation of PRIMARY KEY constraint 'PK_IVH_CHANNEL_GROUP'. Cannot insert duplicate key in object 'dbo.IVH_CHANNEL_GROUP'. The duplicate key value is (00002).DB-Lib error message 20018, severity 14:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\cases\test_cases.py", line 68, in test_precondition
+    qc.exec_SQL_script("mssql", query=eval(request_param).get("sql") if request_param else None)
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 38, in exec_SQL_script
+    db.execute_query(query)
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\ncsqa\qadatabasemssql.py", line 46, in execute_query
+    cursor.execute(query)
+  File "src\pymssql.pyx", line 467, in pymssql.Cursor.execute
+pymssql.IntegrityError: (2627, b"Violation of PRIMARY KEY constraint 'PK_IVH_CHANNEL_GROUP'. Cannot insert duplicate key in object 'dbo.IVH_CHANNEL_GROUP'. The duplicate key value is (00002).DB-Lib error message 20018, severity 14:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+[2018-12-27 18:05:18]: [test_cases.py] [INFO] [106] Cases Fail ! createGroupMpping-01:this test case is to verify system is able to handle request to create group mapping successfully failed, the actual result is different with expected result
+[2018-12-27 18:05:18]: [test_cases.py] [ERROR] [108] Common validation is fail, the expected result is 200, but the actual result is 404

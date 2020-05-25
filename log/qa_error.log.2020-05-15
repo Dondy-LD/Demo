@@ -1,0 +1,822 @@
+[2020-05-15 09:31:11]: [test_cases.py] [ERROR] [69] HTTPConnectionPool(host='172.16.35.218', port=8807): Max retries exceeded with url: /vms/device/videoDeviceList (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E840926508>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+Traceback (most recent call last):
+  File "C:\Users\p1321768\qa-ummi-device-service-testing\lib\site-packages\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\p1321768\qa-ummi-device-service-testing\lib\site-packages\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "C:\Users\p1321768\qa-ummi-device-service-testing\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\p1321768\qa-ummi-device-service-testing\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "C:\Users\p1321768\qa-ummi-device-service-testing\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "D:\py3.7.6\lib\http\client.py", line 1252, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "D:\py3.7.6\lib\http\client.py", line 1298, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "D:\py3.7.6\lib\http\client.py", line 1247, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "D:\py3.7.6\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "D:\py3.7.6\lib\http\client.py", line 966, in send
+    self.connect()
+  File "C:\Users\p1321768\qa-ummi-device-service-testing\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "C:\Users\p1321768\qa-ummi-device-service-testing\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001E840926508>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\p1321768\qa-ummi-device-service-testing\lib\site-packages\requests\adapters.py", line 440, in send
+    timeout=timeout
+  File "C:\Users\p1321768\qa-ummi-device-service-testing\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\p1321768\qa-ummi-device-service-testing\lib\site-packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='172.16.35.218', port=8807): Max retries exceeded with url: /vms/device/videoDeviceList (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E840926508>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 50, in test_precondition
+    json=eval(request_param).get("json-data") if request_param else None)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 60, in __init__
+    self._response = requests.post(self._path, data=self._data, json=self._json, files=self._files, headers=self._headers)
+  File "C:\Users\p1321768\qa-ummi-device-service-testing\lib\site-packages\requests\api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "C:\Users\p1321768\qa-ummi-device-service-testing\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\p1321768\qa-ummi-device-service-testing\lib\site-packages\requests\sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\p1321768\qa-ummi-device-service-testing\lib\site-packages\requests\sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\p1321768\qa-ummi-device-service-testing\lib\site-packages\requests\adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='172.16.35.218', port=8807): Max retries exceeded with url: /vms/device/videoDeviceList (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E840926508>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+[2020-05-15 09:31:14]: [test_cases.py] [ERROR] [148] HTTPConnectionPool(host='172.16.35.218', port=8807): Max retries exceeded with url: /vms/device/devices/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E842419D08>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+Traceback (most recent call last):
+  File "C:\Users\p1321768\qa-ummi-device-service-testing\lib\site-packages\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\p1321768\qa-ummi-device-service-testing\lib\site-packages\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "C:\Users\p1321768\qa-ummi-device-service-testing\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\p1321768\qa-ummi-device-service-testing\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "C:\Users\p1321768\qa-ummi-device-service-testing\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "D:\py3.7.6\lib\http\client.py", line 1252, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "D:\py3.7.6\lib\http\client.py", line 1298, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "D:\py3.7.6\lib\http\client.py", line 1247, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "D:\py3.7.6\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "D:\py3.7.6\lib\http\client.py", line 966, in send
+    self.connect()
+  File "C:\Users\p1321768\qa-ummi-device-service-testing\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "C:\Users\p1321768\qa-ummi-device-service-testing\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001E842419D08>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\p1321768\qa-ummi-device-service-testing\lib\site-packages\requests\adapters.py", line 440, in send
+    timeout=timeout
+  File "C:\Users\p1321768\qa-ummi-device-service-testing\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\p1321768\qa-ummi-device-service-testing\lib\site-packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='172.16.35.218', port=8807): Max retries exceeded with url: /vms/device/devices/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E842419D08>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 137, in test_teardown
+    swapper=eval(swapper) if swapper else None, indicator=indicator if indicator else None)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 64, in __init__
+    self._response = requests.delete(self._path, headers=self._headers)
+  File "C:\Users\p1321768\qa-ummi-device-service-testing\lib\site-packages\requests\api.py", line 152, in delete
+    return request('delete', url, **kwargs)
+  File "C:\Users\p1321768\qa-ummi-device-service-testing\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\p1321768\qa-ummi-device-service-testing\lib\site-packages\requests\sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\p1321768\qa-ummi-device-service-testing\lib\site-packages\requests\sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\p1321768\qa-ummi-device-service-testing\lib\site-packages\requests\adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='172.16.35.218', port=8807): Max retries exceeded with url: /vms/device/devices/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E842419D08>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+[2020-05-15 09:31:40]: [test_cases.py] [ERROR] [69] [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 58, in test_precondition
+    qc.update_testdata_for_data_preparation(datac, case_id, response.responsejson, eval(field_value), tc.data_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 32, in update_testdata_for_data_preparation
+    datac.update_value_to_excel(pendingupdate, datapath)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qadatacentral.py", line 184, in update_value_to_excel
+    new_excel.save(excel_path)
+  File "C:\Users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\Workbook.py", line 710, in save
+    doc.save(filename_or_stream, self.get_biff_data())
+  File "C:\Users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\CompoundDoc.py", line 262, in save
+    f = open(file_name_or_filelike_obj, 'w+b')
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+[2020-05-15 09:31:40]: [test_cases.py] [ERROR] [69] [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 58, in test_precondition
+    qc.update_testdata_for_data_preparation(datac, case_id, response.responsejson, eval(field_value), tc.data_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 32, in update_testdata_for_data_preparation
+    datac.update_value_to_excel(pendingupdate, datapath)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qadatacentral.py", line 184, in update_value_to_excel
+    new_excel.save(excel_path)
+  File "C:\Users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\Workbook.py", line 710, in save
+    doc.save(filename_or_stream, self.get_biff_data())
+  File "C:\Users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\CompoundDoc.py", line 262, in save
+    f = open(file_name_or_filelike_obj, 'w+b')
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+[2020-05-15 09:31:50]: [test_cases.py] [ERROR] [69] [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 58, in test_precondition
+    qc.update_testdata_for_data_preparation(datac, case_id, response.responsejson, eval(field_value), tc.data_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 32, in update_testdata_for_data_preparation
+    datac.update_value_to_excel(pendingupdate, datapath)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qadatacentral.py", line 184, in update_value_to_excel
+    new_excel.save(excel_path)
+  File "C:\Users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\Workbook.py", line 710, in save
+    doc.save(filename_or_stream, self.get_biff_data())
+  File "C:\Users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\CompoundDoc.py", line 262, in save
+    f = open(file_name_or_filelike_obj, 'w+b')
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+[2020-05-15 09:31:50]: [test_cases.py] [ERROR] [69] [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 58, in test_precondition
+    qc.update_testdata_for_data_preparation(datac, case_id, response.responsejson, eval(field_value), tc.data_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 32, in update_testdata_for_data_preparation
+    datac.update_value_to_excel(pendingupdate, datapath)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qadatacentral.py", line 184, in update_value_to_excel
+    new_excel.save(excel_path)
+  File "C:\Users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\Workbook.py", line 710, in save
+    doc.save(filename_or_stream, self.get_biff_data())
+  File "C:\Users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\CompoundDoc.py", line 262, in save
+    f = open(file_name_or_filelike_obj, 'w+b')
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+[2020-05-15 09:32:12]: [test_cases.py] [ERROR] [69] [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 58, in test_precondition
+    qc.update_testdata_for_data_preparation(datac, case_id, response.responsejson, eval(field_value), tc.data_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 32, in update_testdata_for_data_preparation
+    datac.update_value_to_excel(pendingupdate, datapath)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qadatacentral.py", line 184, in update_value_to_excel
+    new_excel.save(excel_path)
+  File "C:\Users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\Workbook.py", line 710, in save
+    doc.save(filename_or_stream, self.get_biff_data())
+  File "C:\Users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\CompoundDoc.py", line 262, in save
+    f = open(file_name_or_filelike_obj, 'w+b')
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+[2020-05-15 09:32:12]: [test_cases.py] [ERROR] [69] [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 58, in test_precondition
+    qc.update_testdata_for_data_preparation(datac, case_id, response.responsejson, eval(field_value), tc.data_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 32, in update_testdata_for_data_preparation
+    datac.update_value_to_excel(pendingupdate, datapath)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qadatacentral.py", line 184, in update_value_to_excel
+    new_excel.save(excel_path)
+  File "C:\Users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\Workbook.py", line 710, in save
+    doc.save(filename_or_stream, self.get_biff_data())
+  File "C:\Users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\CompoundDoc.py", line 262, in save
+    f = open(file_name_or_filelike_obj, 'w+b')
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+[2020-05-15 09:53:56]: [test_cases.py] [ERROR] [71] [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 59, in test_precondition
+    tc.data_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 32, in update_testdata_for_data_preparation
+    datac.update_value_to_excel(pendingupdate, datapath)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qadatacentral.py", line 184, in update_value_to_excel
+    new_excel.save(excel_path)
+  File "C:\Users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\Workbook.py", line 710, in save
+    doc.save(filename_or_stream, self.get_biff_data())
+  File "C:\Users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\CompoundDoc.py", line 262, in save
+    f = open(file_name_or_filelike_obj, 'w+b')
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+[2020-05-15 09:53:56]: [test_cases.py] [ERROR] [71] [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 59, in test_precondition
+    tc.data_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 32, in update_testdata_for_data_preparation
+    datac.update_value_to_excel(pendingupdate, datapath)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qadatacentral.py", line 184, in update_value_to_excel
+    new_excel.save(excel_path)
+  File "C:\Users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\Workbook.py", line 710, in save
+    doc.save(filename_or_stream, self.get_biff_data())
+  File "C:\Users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\CompoundDoc.py", line 262, in save
+    f = open(file_name_or_filelike_obj, 'w+b')
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+[2020-05-15 09:58:53]: [test_cases.py] [ERROR] [71] [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 59, in test_precondition
+    tc.data_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 32, in update_testdata_for_data_preparation
+    datac.update_value_to_excel(pendingupdate, datapath)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qadatacentral.py", line 184, in update_value_to_excel
+    new_excel.save(excel_path)
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\Workbook.py", line 710, in save
+    doc.save(filename_or_stream, self.get_biff_data())
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\CompoundDoc.py", line 262, in save
+    f = open(file_name_or_filelike_obj, 'w+b')
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+[2020-05-15 09:58:53]: [test_cases.py] [ERROR] [71] [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 59, in test_precondition
+    tc.data_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 32, in update_testdata_for_data_preparation
+    datac.update_value_to_excel(pendingupdate, datapath)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qadatacentral.py", line 184, in update_value_to_excel
+    new_excel.save(excel_path)
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\Workbook.py", line 710, in save
+    doc.save(filename_or_stream, self.get_biff_data())
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\CompoundDoc.py", line 262, in save
+    f = open(file_name_or_filelike_obj, 'w+b')
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+[2020-05-15 10:01:03]: [test_cases.py] [ERROR] [71] [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 59, in test_precondition
+    tc.data_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 32, in update_testdata_for_data_preparation
+    datac.update_value_to_excel(pendingupdate, datapath)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qadatacentral.py", line 184, in update_value_to_excel
+    new_excel.save(excel_path)
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\Workbook.py", line 710, in save
+    doc.save(filename_or_stream, self.get_biff_data())
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\CompoundDoc.py", line 262, in save
+    f = open(file_name_or_filelike_obj, 'w+b')
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+[2020-05-15 10:01:03]: [test_cases.py] [ERROR] [71] [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 59, in test_precondition
+    tc.data_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 32, in update_testdata_for_data_preparation
+    datac.update_value_to_excel(pendingupdate, datapath)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qadatacentral.py", line 184, in update_value_to_excel
+    new_excel.save(excel_path)
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\Workbook.py", line 710, in save
+    doc.save(filename_or_stream, self.get_biff_data())
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\CompoundDoc.py", line 262, in save
+    f = open(file_name_or_filelike_obj, 'w+b')
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+[2020-05-15 10:01:09]: [test_cases.py] [ERROR] [150] 'InterFace' object has no attribute '_response'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 141, in test_teardown
+    if response.httpstatuscd != response.status_ok:
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 76, in httpstatuscd
+    return self._response.status_code
+AttributeError: 'InterFace' object has no attribute '_response'
+[2020-05-15 10:01:09]: [test_cases.py] [ERROR] [150] 'InterFace' object has no attribute '_response'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 141, in test_teardown
+    if response.httpstatuscd != response.status_ok:
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 76, in httpstatuscd
+    return self._response.status_code
+AttributeError: 'InterFace' object has no attribute '_response'
+[2020-05-15 10:01:21]: [test_cases.py] [ERROR] [150] 'InterFace' object has no attribute '_response'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 141, in test_teardown
+    if response.httpstatuscd != response.status_ok:
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 76, in httpstatuscd
+    return self._response.status_code
+AttributeError: 'InterFace' object has no attribute '_response'
+[2020-05-15 10:01:21]: [test_cases.py] [ERROR] [150] 'InterFace' object has no attribute '_response'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 141, in test_teardown
+    if response.httpstatuscd != response.status_ok:
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 76, in httpstatuscd
+    return self._response.status_code
+AttributeError: 'InterFace' object has no attribute '_response'
+[2020-05-15 10:02:10]: [test_cases.py] [ERROR] [150] 'InterFace' object has no attribute '_response'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 141, in test_teardown
+    if response.httpstatuscd != response.status_ok:
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 76, in httpstatuscd
+    return self._response.status_code
+AttributeError: 'InterFace' object has no attribute '_response'
+[2020-05-15 10:02:10]: [test_cases.py] [ERROR] [150] 'InterFace' object has no attribute '_response'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 141, in test_teardown
+    if response.httpstatuscd != response.status_ok:
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 76, in httpstatuscd
+    return self._response.status_code
+AttributeError: 'InterFace' object has no attribute '_response'
+[2020-05-15 10:53:04]: [test_cases.py] [ERROR] [150] 'InterFace' object has no attribute '_response'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 141, in test_teardown
+    if response.httpstatuscd != response.status_ok:
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 76, in httpstatuscd
+    return self._response.status_code
+AttributeError: 'InterFace' object has no attribute '_response'
+[2020-05-15 10:53:04]: [test_cases.py] [ERROR] [150] 'InterFace' object has no attribute '_response'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 141, in test_teardown
+    if response.httpstatuscd != response.status_ok:
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 76, in httpstatuscd
+    return self._response.status_code
+AttributeError: 'InterFace' object has no attribute '_response'
+[2020-05-15 10:55:12]: [test_cases.py] [ERROR] [150] 'InterFace' object has no attribute '_response'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 141, in test_teardown
+    if response.httpstatuscd != response.status_ok:
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 76, in httpstatuscd
+    return self._response.status_code
+AttributeError: 'InterFace' object has no attribute '_response'
+[2020-05-15 10:55:12]: [test_cases.py] [ERROR] [150] 'InterFace' object has no attribute '_response'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 141, in test_teardown
+    if response.httpstatuscd != response.status_ok:
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 76, in httpstatuscd
+    return self._response.status_code
+AttributeError: 'InterFace' object has no attribute '_response'
+[2020-05-15 10:55:27]: [test_cases.py] [ERROR] [150] 'InterFace' object has no attribute '_response'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 141, in test_teardown
+    if response.httpstatuscd != response.status_ok:
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 76, in httpstatuscd
+    return self._response.status_code
+AttributeError: 'InterFace' object has no attribute '_response'
+[2020-05-15 10:55:27]: [test_cases.py] [ERROR] [150] 'InterFace' object has no attribute '_response'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 141, in test_teardown
+    if response.httpstatuscd != response.status_ok:
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 76, in httpstatuscd
+    return self._response.status_code
+AttributeError: 'InterFace' object has no attribute '_response'
+[2020-05-15 10:55:42]: [test_cases.py] [ERROR] [150] 'InterFace' object has no attribute '_response'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 141, in test_teardown
+    if response.httpstatuscd != response.status_ok:
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 76, in httpstatuscd
+    return self._response.status_code
+AttributeError: 'InterFace' object has no attribute '_response'
+[2020-05-15 10:55:42]: [test_cases.py] [ERROR] [150] 'InterFace' object has no attribute '_response'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 141, in test_teardown
+    if response.httpstatuscd != response.status_ok:
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 76, in httpstatuscd
+    return self._response.status_code
+AttributeError: 'InterFace' object has no attribute '_response'
+[2020-05-15 11:19:33]: [test_cases.py] [ERROR] [150] 'InterFace' object has no attribute '_response'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 141, in test_teardown
+    if response.httpstatuscd != response.status_ok:
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 76, in httpstatuscd
+    return self._response.status_code
+AttributeError: 'InterFace' object has no attribute '_response'
+[2020-05-15 11:19:33]: [test_cases.py] [ERROR] [150] 'InterFace' object has no attribute '_response'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 141, in test_teardown
+    if response.httpstatuscd != response.status_ok:
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 76, in httpstatuscd
+    return self._response.status_code
+AttributeError: 'InterFace' object has no attribute '_response'
+[2020-05-15 14:22:22]: [test_cases.py] [ERROR] [150] 'InterFace' object has no attribute '_response'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 141, in test_teardown
+    if response.httpstatuscd != response.status_ok:
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 76, in httpstatuscd
+    return self._response.status_code
+AttributeError: 'InterFace' object has no attribute '_response'
+[2020-05-15 14:22:22]: [test_cases.py] [ERROR] [150] 'InterFace' object has no attribute '_response'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 141, in test_teardown
+    if response.httpstatuscd != response.status_ok:
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 76, in httpstatuscd
+    return self._response.status_code
+AttributeError: 'InterFace' object has no attribute '_response'
+[2020-05-15 16:03:05]: [test_cases.py] [ERROR] [71] [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 59, in test_precondition
+    tc.data_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 32, in update_testdata_for_data_preparation
+    datac.update_value_to_excel(pendingupdate, datapath)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qadatacentral.py", line 206, in update_value_to_excel
+    new_excel.save(excel_path)
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\Workbook.py", line 710, in save
+    doc.save(filename_or_stream, self.get_biff_data())
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\CompoundDoc.py", line 262, in save
+    f = open(file_name_or_filelike_obj, 'w+b')
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+[2020-05-15 16:03:05]: [test_cases.py] [ERROR] [71] [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 59, in test_precondition
+    tc.data_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 32, in update_testdata_for_data_preparation
+    datac.update_value_to_excel(pendingupdate, datapath)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qadatacentral.py", line 206, in update_value_to_excel
+    new_excel.save(excel_path)
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\Workbook.py", line 710, in save
+    doc.save(filename_or_stream, self.get_biff_data())
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\CompoundDoc.py", line 262, in save
+    f = open(file_name_or_filelike_obj, 'w+b')
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+[2020-05-15 16:05:11]: [test_cases.py] [ERROR] [118] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-15 16:05:11]: [test_cases.py] [ERROR] [118] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-15 16:08:26]: [test_cases.py] [ERROR] [70] [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 58, in test_precondition
+    tc.data_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 32, in update_testdata_for_data_preparation
+    datac.update_value_to_excel(pendingupdate, datapath)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qadatacentral.py", line 206, in update_value_to_excel
+    new_excel.save(excel_path)
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\Workbook.py", line 710, in save
+    doc.save(filename_or_stream, self.get_biff_data())
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\CompoundDoc.py", line 262, in save
+    f = open(file_name_or_filelike_obj, 'w+b')
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+[2020-05-15 16:08:26]: [test_cases.py] [ERROR] [70] [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 58, in test_precondition
+    tc.data_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 32, in update_testdata_for_data_preparation
+    datac.update_value_to_excel(pendingupdate, datapath)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qadatacentral.py", line 206, in update_value_to_excel
+    new_excel.save(excel_path)
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\Workbook.py", line 710, in save
+    doc.save(filename_or_stream, self.get_biff_data())
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\CompoundDoc.py", line 262, in save
+    f = open(file_name_or_filelike_obj, 'w+b')
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+[2020-05-15 16:08:30]: [test_cases.py] [ERROR] [118] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-15 16:08:30]: [test_cases.py] [ERROR] [118] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-15 16:12:38]: [test_cases.py] [ERROR] [70] [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 58, in test_precondition
+    tc.data_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 32, in update_testdata_for_data_preparation
+    datac.update_value_to_excel(pendingupdate, datapath)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qadatacentral.py", line 206, in update_value_to_excel
+    new_excel.save(excel_path)
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\Workbook.py", line 710, in save
+    doc.save(filename_or_stream, self.get_biff_data())
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\CompoundDoc.py", line 262, in save
+    f = open(file_name_or_filelike_obj, 'w+b')
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+[2020-05-15 16:12:38]: [test_cases.py] [ERROR] [70] [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 58, in test_precondition
+    tc.data_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 32, in update_testdata_for_data_preparation
+    datac.update_value_to_excel(pendingupdate, datapath)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qadatacentral.py", line 206, in update_value_to_excel
+    new_excel.save(excel_path)
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\Workbook.py", line 710, in save
+    doc.save(filename_or_stream, self.get_biff_data())
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\CompoundDoc.py", line 262, in save
+    f = open(file_name_or_filelike_obj, 'w+b')
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+[2020-05-15 16:12:39]: [test_cases.py] [ERROR] [118] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-15 16:12:39]: [test_cases.py] [ERROR] [118] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-15 16:16:28]: [test_cases.py] [ERROR] [118] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-15 16:16:28]: [test_cases.py] [ERROR] [118] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-15 16:31:41]: [test_cases.py] [ERROR] [118] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-15 16:31:41]: [test_cases.py] [ERROR] [118] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-15 16:36:29]: [test_cases.py] [ERROR] [118] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-15 16:36:29]: [test_cases.py] [ERROR] [118] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-15 16:59:31]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-15 16:59:31]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-15 17:04:45]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-15 17:04:45]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-15 17:06:04]: [test_cases.py] [ERROR] [70] [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 58, in test_precondition
+    tc.data_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 32, in update_testdata_for_data_preparation
+    datac.update_value_to_excel(pendingupdate, datapath)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qadatacentral.py", line 206, in update_value_to_excel
+    new_excel.save(excel_path)
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\Workbook.py", line 710, in save
+    doc.save(filename_or_stream, self.get_biff_data())
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\CompoundDoc.py", line 262, in save
+    f = open(file_name_or_filelike_obj, 'w+b')
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+[2020-05-15 17:06:04]: [test_cases.py] [ERROR] [70] [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 58, in test_precondition
+    tc.data_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 32, in update_testdata_for_data_preparation
+    datac.update_value_to_excel(pendingupdate, datapath)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qadatacentral.py", line 206, in update_value_to_excel
+    new_excel.save(excel_path)
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\Workbook.py", line 710, in save
+    doc.save(filename_or_stream, self.get_biff_data())
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\CompoundDoc.py", line 262, in save
+    f = open(file_name_or_filelike_obj, 'w+b')
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+[2020-05-15 17:11:50]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-15 17:11:50]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-15 17:15:57]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 404
+[2020-05-15 17:15:57]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 404
+[2020-05-15 17:19:01]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 404
+[2020-05-15 17:19:01]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 404
+[2020-05-15 17:19:33]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 404
+[2020-05-15 17:19:33]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 404
+[2020-05-15 17:20:19]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 404
+[2020-05-15 17:20:19]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 404
+[2020-05-15 17:23:26]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 404
+[2020-05-15 17:23:26]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 404
+[2020-05-15 17:25:46]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 404
+[2020-05-15 17:25:46]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 404
+[2020-05-15 17:26:40]: [test_cases.py] [ERROR] [70] [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 58, in test_precondition
+    tc.data_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 32, in update_testdata_for_data_preparation
+    datac.update_value_to_excel(pendingupdate, datapath)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qadatacentral.py", line 206, in update_value_to_excel
+    new_excel.save(excel_path)
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\Workbook.py", line 710, in save
+    doc.save(filename_or_stream, self.get_biff_data())
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\CompoundDoc.py", line 262, in save
+    f = open(file_name_or_filelike_obj, 'w+b')
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+[2020-05-15 17:26:40]: [test_cases.py] [ERROR] [70] [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 58, in test_precondition
+    tc.data_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 32, in update_testdata_for_data_preparation
+    datac.update_value_to_excel(pendingupdate, datapath)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qadatacentral.py", line 206, in update_value_to_excel
+    new_excel.save(excel_path)
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\Workbook.py", line 710, in save
+    doc.save(filename_or_stream, self.get_biff_data())
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\CompoundDoc.py", line 262, in save
+    f = open(file_name_or_filelike_obj, 'w+b')
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+[2020-05-15 17:26:51]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 404
+[2020-05-15 17:26:51]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 404
+[2020-05-15 17:27:40]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 404
+[2020-05-15 17:27:40]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 404
+[2020-05-15 17:30:12]: [test_cases.py] [ERROR] [70] [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 58, in test_precondition
+    tc.data_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 32, in update_testdata_for_data_preparation
+    datac.update_value_to_excel(pendingupdate, datapath)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qadatacentral.py", line 206, in update_value_to_excel
+    new_excel.save(excel_path)
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\Workbook.py", line 710, in save
+    doc.save(filename_or_stream, self.get_biff_data())
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\CompoundDoc.py", line 262, in save
+    f = open(file_name_or_filelike_obj, 'w+b')
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+[2020-05-15 17:30:12]: [test_cases.py] [ERROR] [70] [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 58, in test_precondition
+    tc.data_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 32, in update_testdata_for_data_preparation
+    datac.update_value_to_excel(pendingupdate, datapath)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qadatacentral.py", line 206, in update_value_to_excel
+    new_excel.save(excel_path)
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\Workbook.py", line 710, in save
+    doc.save(filename_or_stream, self.get_biff_data())
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\CompoundDoc.py", line 262, in save
+    f = open(file_name_or_filelike_obj, 'w+b')
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+[2020-05-15 17:30:26]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-15 17:30:26]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-15 17:30:47]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-15 17:30:47]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-15 17:46:48]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 404, but the actual status is 400
+[2020-05-15 17:46:48]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 404, but the actual status is 400
+[2020-05-15 17:53:30]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-15 17:53:30]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-15 17:56:14]: [test_cases.py] [ERROR] [70] 'Updatedevice-01' is not in list
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 62, in test_precondition
+    eval(tdfield_value), tc.predata_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 19, in update_testdata_for_data_preparation
+    rowindex, colindex = datac.get_index_by_row_column_value(case_id, key)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qadatacentral.py", line 157, in get_index_by_row_column_value
+    rowindex = colval.index(row_value)
+ValueError: 'Updatedevice-01' is not in list
+[2020-05-15 17:56:14]: [test_cases.py] [ERROR] [70] 'Updatedevice-01' is not in list
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 62, in test_precondition
+    eval(tdfield_value), tc.predata_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 19, in update_testdata_for_data_preparation
+    rowindex, colindex = datac.get_index_by_row_column_value(case_id, key)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qadatacentral.py", line 157, in get_index_by_row_column_value
+    rowindex = colval.index(row_value)
+ValueError: 'Updatedevice-01' is not in list
+[2020-05-15 17:56:17]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 404
+[2020-05-15 17:56:17]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 404
+[2020-05-15 17:56:18]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-15 17:56:18]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-15 17:56:39]: [test_cases.py] [ERROR] [70] 'Updatedevice-01' is not in list
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 62, in test_precondition
+    eval(tdfield_value), tc.predata_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 19, in update_testdata_for_data_preparation
+    rowindex, colindex = datac.get_index_by_row_column_value(case_id, key)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qadatacentral.py", line 157, in get_index_by_row_column_value
+    rowindex = colval.index(row_value)
+ValueError: 'Updatedevice-01' is not in list
+[2020-05-15 17:56:39]: [test_cases.py] [ERROR] [70] 'Updatedevice-01' is not in list
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 62, in test_precondition
+    eval(tdfield_value), tc.predata_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 19, in update_testdata_for_data_preparation
+    rowindex, colindex = datac.get_index_by_row_column_value(case_id, key)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qadatacentral.py", line 157, in get_index_by_row_column_value
+    rowindex = colval.index(row_value)
+ValueError: 'Updatedevice-01' is not in list
+[2020-05-15 17:56:43]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 404
+[2020-05-15 17:56:43]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 404
+[2020-05-15 17:56:43]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-15 17:56:43]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-15 17:57:48]: [test_cases.py] [ERROR] [70] 'Updatedevice-01' is not in list
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 62, in test_precondition
+    eval(tdfield_value), tc.predata_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 19, in update_testdata_for_data_preparation
+    rowindex, colindex = datac.get_index_by_row_column_value(case_id, key)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qadatacentral.py", line 157, in get_index_by_row_column_value
+    rowindex = colval.index(row_value)
+ValueError: 'Updatedevice-01' is not in list
+[2020-05-15 17:57:48]: [test_cases.py] [ERROR] [70] 'Updatedevice-01' is not in list
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 62, in test_precondition
+    eval(tdfield_value), tc.predata_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 19, in update_testdata_for_data_preparation
+    rowindex, colindex = datac.get_index_by_row_column_value(case_id, key)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qadatacentral.py", line 157, in get_index_by_row_column_value
+    rowindex = colval.index(row_value)
+ValueError: 'Updatedevice-01' is not in list
+[2020-05-15 17:57:51]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 404
+[2020-05-15 17:57:51]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 404
+[2020-05-15 17:57:52]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-15 17:57:52]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-15 18:19:42]: [test_cases.py] [ERROR] [70] [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 58, in test_precondition
+    tc.data_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 32, in update_testdata_for_data_preparation
+    datac.update_value_to_excel(pendingupdate, datapath)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qadatacentral.py", line 206, in update_value_to_excel
+    new_excel.save(excel_path)
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\Workbook.py", line 710, in save
+    doc.save(filename_or_stream, self.get_biff_data())
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\CompoundDoc.py", line 262, in save
+    f = open(file_name_or_filelike_obj, 'w+b')
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+[2020-05-15 18:19:42]: [test_cases.py] [ERROR] [70] [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 58, in test_precondition
+    tc.data_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 32, in update_testdata_for_data_preparation
+    datac.update_value_to_excel(pendingupdate, datapath)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qadatacentral.py", line 206, in update_value_to_excel
+    new_excel.save(excel_path)
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\Workbook.py", line 710, in save
+    doc.save(filename_or_stream, self.get_biff_data())
+  File "c:\users\p1321768\qa-ummi-device-service-testing\lib\site-packages\xlwt\CompoundDoc.py", line 262, in save
+    f = open(file_name_or_filelike_obj, 'w+b')
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\p1321768\\PycharmProjects\\qa-ummi-device-service-testing\\data\\test_data.xls'
+[2020-05-15 18:19:49]: [test_cases.py] [ERROR] [70] 'Updatedevice-01' is not in list
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 62, in test_precondition
+    eval(tdfield_value), tc.predata_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 19, in update_testdata_for_data_preparation
+    rowindex, colindex = datac.get_index_by_row_column_value(case_id, key)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qadatacentral.py", line 157, in get_index_by_row_column_value
+    rowindex = colval.index(row_value)
+ValueError: 'Updatedevice-01' is not in list
+[2020-05-15 18:19:49]: [test_cases.py] [ERROR] [70] 'Updatedevice-01' is not in list
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 62, in test_precondition
+    eval(tdfield_value), tc.predata_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 19, in update_testdata_for_data_preparation
+    rowindex, colindex = datac.get_index_by_row_column_value(case_id, key)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qadatacentral.py", line 157, in get_index_by_row_column_value
+    rowindex = colval.index(row_value)
+ValueError: 'Updatedevice-01' is not in list
+[2020-05-15 18:19:52]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 404
+[2020-05-15 18:19:52]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 404
+[2020-05-15 18:19:53]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-15 18:19:53]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-15 18:20:40]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-15 18:20:40]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-15 18:23:43]: [test_cases.py] [ERROR] [70] 'Updatedevice-01' is not in list
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 62, in test_precondition
+    eval(tdfield_value), tc.predata_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 19, in update_testdata_for_data_preparation
+    rowindex, colindex = datac.get_index_by_row_column_value(case_id, key)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qadatacentral.py", line 157, in get_index_by_row_column_value
+    rowindex = colval.index(row_value)
+ValueError: 'Updatedevice-01' is not in list
+[2020-05-15 18:23:43]: [test_cases.py] [ERROR] [70] 'Updatedevice-01' is not in list
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 62, in test_precondition
+    eval(tdfield_value), tc.predata_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 19, in update_testdata_for_data_preparation
+    rowindex, colindex = datac.get_index_by_row_column_value(case_id, key)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qadatacentral.py", line 157, in get_index_by_row_column_value
+    rowindex = colval.index(row_value)
+ValueError: 'Updatedevice-01' is not in list
+[2020-05-15 18:23:48]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 404
+[2020-05-15 18:23:48]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 404
+[2020-05-15 18:25:04]: [test_cases.py] [ERROR] [70] 'Updatedevice-01' is not in list
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 62, in test_precondition
+    eval(tdfield_value), tc.predata_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 19, in update_testdata_for_data_preparation
+    rowindex, colindex = datac.get_index_by_row_column_value(case_id, key)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qadatacentral.py", line 157, in get_index_by_row_column_value
+    rowindex = colval.index(row_value)
+ValueError: 'Updatedevice-01' is not in list
+[2020-05-15 18:25:04]: [test_cases.py] [ERROR] [70] 'Updatedevice-01' is not in list
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 62, in test_precondition
+    eval(tdfield_value), tc.predata_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 19, in update_testdata_for_data_preparation
+    rowindex, colindex = datac.get_index_by_row_column_value(case_id, key)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qadatacentral.py", line 157, in get_index_by_row_column_value
+    rowindex = colval.index(row_value)
+ValueError: 'Updatedevice-01' is not in list
+[2020-05-15 18:25:10]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 404
+[2020-05-15 18:25:10]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 404
+[2020-05-15 18:26:35]: [test_cases.py] [ERROR] [70] 'Updatedevice-01' is not in list
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 62, in test_precondition
+    eval(tdfield_value), tc.predata_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 19, in update_testdata_for_data_preparation
+    rowindex, colindex = datac.get_index_by_row_column_value(case_id, key)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qadatacentral.py", line 157, in get_index_by_row_column_value
+    rowindex = colval.index(row_value)
+ValueError: 'Updatedevice-01' is not in list
+[2020-05-15 18:26:35]: [test_cases.py] [ERROR] [70] 'Updatedevice-01' is not in list
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 62, in test_precondition
+    eval(tdfield_value), tc.predata_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 19, in update_testdata_for_data_preparation
+    rowindex, colindex = datac.get_index_by_row_column_value(case_id, key)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qadatacentral.py", line 157, in get_index_by_row_column_value
+    rowindex = colval.index(row_value)
+ValueError: 'Updatedevice-01' is not in list
+[2020-05-15 18:26:40]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 404
+[2020-05-15 18:26:40]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 404
+[2020-05-15 18:27:30]: [test_cases.py] [ERROR] [70] 'Updatedevice-01' is not in list
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 62, in test_precondition
+    eval(tdfield_value), tc.predata_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 19, in update_testdata_for_data_preparation
+    rowindex, colindex = datac.get_index_by_row_column_value(case_id, key)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qadatacentral.py", line 157, in get_index_by_row_column_value
+    rowindex = colval.index(row_value)
+ValueError: 'Updatedevice-01' is not in list
+[2020-05-15 18:27:30]: [test_cases.py] [ERROR] [70] 'Updatedevice-01' is not in list
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 62, in test_precondition
+    eval(tdfield_value), tc.predata_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 19, in update_testdata_for_data_preparation
+    rowindex, colindex = datac.get_index_by_row_column_value(case_id, key)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qadatacentral.py", line 157, in get_index_by_row_column_value
+    rowindex = colval.index(row_value)
+ValueError: 'Updatedevice-01' is not in list
+[2020-05-15 18:27:35]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 404
+[2020-05-15 18:27:35]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 404
+[2020-05-15 18:34:15]: [test_cases.py] [ERROR] [70] 'Updatedevice-01' is not in list
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 62, in test_precondition
+    eval(tdfield_value), tc.predata_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 19, in update_testdata_for_data_preparation
+    rowindex, colindex = datac.get_index_by_row_column_value(case_id, key)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qadatacentral.py", line 157, in get_index_by_row_column_value
+    rowindex = colval.index(row_value)
+ValueError: 'Updatedevice-01' is not in list
+[2020-05-15 18:34:15]: [test_cases.py] [ERROR] [70] 'Updatedevice-01' is not in list
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 62, in test_precondition
+    eval(tdfield_value), tc.predata_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 19, in update_testdata_for_data_preparation
+    rowindex, colindex = datac.get_index_by_row_column_value(case_id, key)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qadatacentral.py", line 157, in get_index_by_row_column_value
+    rowindex = colval.index(row_value)
+ValueError: 'Updatedevice-01' is not in list
+[2020-05-15 18:34:20]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-15 18:34:20]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-15 18:34:20]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-15 18:34:20]: [test_cases.py] [ERROR] [119] Common validation is fail, the expected status is 200, but the actual status is 400

@@ -1,0 +1,156 @@
+[2020-05-21 10:32:09]: [test_cases.py] [ERROR] [71] EOL while scanning string literal (<string>, line 1)
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 59, in test_precondition
+    eval(field_value), tc.data_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 21, in update_testdata_for_data_preparation
+    olddata = eval(datac.table.cell(rowindex, colindex).value)
+  File "<string>", line 1
+    {'{iconUri}': temp'}
+                       ^
+SyntaxError: EOL while scanning string literal
+[2020-05-21 10:32:12]: [test_cases.py] [ERROR] [133] EOL while scanning string literal (<string>, line 1)
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 80, in test_cases
+    new_swapper = eval(swapper) if swapper else None  # read data form database to replace the request data
+  File "<string>", line 1
+    {'{iconUri}': temp'}
+                       ^
+SyntaxError: EOL while scanning string literal
+[2020-05-21 10:32:12]: [test_cases.py] [ERROR] [133] EOL while scanning string literal (<string>, line 1)
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 80, in test_cases
+    new_swapper = eval(swapper) if swapper else None  # read data form database to replace the request data
+  File "<string>", line 1
+    {'{iconUri}': temp'}
+                       ^
+SyntaxError: EOL while scanning string literal
+[2020-05-21 10:33:02]: [test_cases.py] [ERROR] [71] EOL while scanning string literal (<string>, line 1)
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 59, in test_precondition
+    eval(field_value), tc.data_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 21, in update_testdata_for_data_preparation
+    olddata = eval(datac.table.cell(rowindex, colindex).value)
+  File "<string>", line 1
+    {'{iconUri}': temp'}
+                       ^
+SyntaxError: EOL while scanning string literal
+[2020-05-21 10:33:02]: [test_cases.py] [ERROR] [71] EOL while scanning string literal (<string>, line 1)
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 59, in test_precondition
+    eval(field_value), tc.data_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 21, in update_testdata_for_data_preparation
+    olddata = eval(datac.table.cell(rowindex, colindex).value)
+  File "<string>", line 1
+    {'{iconUri}': temp'}
+                       ^
+SyntaxError: EOL while scanning string literal
+[2020-05-21 10:33:02]: [test_cases.py] [ERROR] [133] EOL while scanning string literal (<string>, line 1)
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 80, in test_cases
+    new_swapper = eval(swapper) if swapper else None  # read data form database to replace the request data
+  File "<string>", line 1
+    {'{iconUri}': temp'}
+                       ^
+SyntaxError: EOL while scanning string literal
+[2020-05-21 10:33:02]: [test_cases.py] [ERROR] [133] EOL while scanning string literal (<string>, line 1)
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 80, in test_cases
+    new_swapper = eval(swapper) if swapper else None  # read data form database to replace the request data
+  File "<string>", line 1
+    {'{iconUri}': temp'}
+                       ^
+SyntaxError: EOL while scanning string literal
+[2020-05-21 10:52:58]: [test_cases.py] [ERROR] [71] EOL while scanning string literal (<string>, line 1)
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 59, in test_precondition
+    eval(field_value), tc.data_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 21, in update_testdata_for_data_preparation
+    olddata = eval(datac.table.cell(rowindex, colindex).value)
+  File "<string>", line 1
+    {'{iconUri}': temp'}
+                       ^
+SyntaxError: EOL while scanning string literal
+[2020-05-21 10:52:58]: [test_cases.py] [ERROR] [71] EOL while scanning string literal (<string>, line 1)
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 59, in test_precondition
+    eval(field_value), tc.data_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 21, in update_testdata_for_data_preparation
+    olddata = eval(datac.table.cell(rowindex, colindex).value)
+  File "<string>", line 1
+    {'{iconUri}': temp'}
+                       ^
+SyntaxError: EOL while scanning string literal
+[2020-05-21 10:52:58]: [test_cases.py] [ERROR] [133] EOL while scanning string literal (<string>, line 1)
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 80, in test_cases
+    new_swapper = eval(swapper) if swapper else None  # read data form database to replace the request data
+  File "<string>", line 1
+    {'{iconUri}': temp'}
+                       ^
+SyntaxError: EOL while scanning string literal
+[2020-05-21 10:52:58]: [test_cases.py] [ERROR] [133] EOL while scanning string literal (<string>, line 1)
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 80, in test_cases
+    new_swapper = eval(swapper) if swapper else None  # read data form database to replace the request data
+  File "<string>", line 1
+    {'{iconUri}': temp'}
+                       ^
+SyntaxError: EOL while scanning string literal
+[2020-05-21 10:53:33]: [test_cases.py] [ERROR] [71] EOL while scanning string literal (<string>, line 1)
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 59, in test_precondition
+    eval(field_value), tc.data_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 21, in update_testdata_for_data_preparation
+    olddata = eval(datac.table.cell(rowindex, colindex).value)
+  File "<string>", line 1
+    {'{iconUri}': temp'}
+                       ^
+SyntaxError: EOL while scanning string literal
+[2020-05-21 10:53:33]: [test_cases.py] [ERROR] [71] EOL while scanning string literal (<string>, line 1)
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 59, in test_precondition
+    eval(field_value), tc.data_path)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 21, in update_testdata_for_data_preparation
+    olddata = eval(datac.table.cell(rowindex, colindex).value)
+  File "<string>", line 1
+    {'{iconUri}': temp'}
+                       ^
+SyntaxError: EOL while scanning string literal
+[2020-05-21 10:53:34]: [test_cases.py] [ERROR] [133] EOL while scanning string literal (<string>, line 1)
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 80, in test_cases
+    new_swapper = eval(swapper) if swapper else None  # read data form database to replace the request data
+  File "<string>", line 1
+    {'{iconUri}': temp'}
+                       ^
+SyntaxError: EOL while scanning string literal
+[2020-05-21 10:53:34]: [test_cases.py] [ERROR] [133] EOL while scanning string literal (<string>, line 1)
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 80, in test_cases
+    new_swapper = eval(swapper) if swapper else None  # read data form database to replace the request data
+  File "<string>", line 1
+    {'{iconUri}': temp'}
+                       ^
+SyntaxError: EOL while scanning string literal
+[2020-05-21 10:56:17]: [test_cases.py] [ERROR] [133] invalid literal for int() with base 10: ''
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 114, in test_cases
+    comvalidation.common_validation(response, expected_statuscd, expected_response)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\comvalidation.py", line 5, in common_validation
+    if response.httpstatuscd != int(expectedstatuscd):
+ValueError: invalid literal for int() with base 10: ''
+[2020-05-21 10:56:17]: [test_cases.py] [ERROR] [133] invalid literal for int() with base 10: ''
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 114, in test_cases
+    comvalidation.common_validation(response, expected_statuscd, expected_response)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\comvalidation.py", line 5, in common_validation
+    if response.httpstatuscd != int(expectedstatuscd):
+ValueError: invalid literal for int() with base 10: ''
+[2020-05-21 11:14:32]: [test_cases.py] [ERROR] [125] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-21 11:14:32]: [test_cases.py] [ERROR] [125] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-21 11:18:07]: [test_cases.py] [ERROR] [125] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-21 11:18:07]: [test_cases.py] [ERROR] [125] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-21 11:27:05]: [test_cases.py] [ERROR] [125] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-21 11:27:05]: [test_cases.py] [ERROR] [125] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-21 11:27:39]: [test_cases.py] [ERROR] [125] Common validation is fail, the expected status is 200, but the actual status is 400
+[2020-05-21 11:27:39]: [test_cases.py] [ERROR] [125] Common validation is fail, the expected status is 200, but the actual status is 400

@@ -1,0 +1,130 @@
+[2018-12-21 14:47:38]: [test_cases.py] [INFO] [99] Cases Fail ! tc01-alarm handling list:this test case is to verify user is able to get alarm handling list with all valid input when DB is blank failed, the actual result is different with expected result
+[2018-12-21 14:47:38]: [test_cases.py] [ERROR] [101] Common validation is fail, the expected result is 200, but the actual result is 404
+[2018-12-21 14:52:57]: [test_cases.py] [INFO] [99] Cases Fail ! tc01-alarm handling list:this test case is to verify user is able to get alarm handling list with all valid input when DB is blank failed, the actual result is different with expected result
+[2018-12-21 14:52:57]: [test_cases.py] [ERROR] [101] Common validation is fail, the expected result is 200, but the actual result is 404
+[2018-12-21 14:53:22]: [test_cases.py] [INFO] [107] Cases Fail ! tc01-alarm handling list:this test case is to verify user is able to get alarm handling list with all valid input when DB is blank failed,  some error hit in test scripts, please contact QA team for more help!
+[2018-12-21 14:53:22]: [test_cases.py] [ERROR] [109] HTTPConnectionPool(host='172.16.35.218', port=8806): Max retries exceeded with url: /ivh-alarm-api/alarmHandlingList (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000231EF4E2630>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+Traceback (most recent call last):
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\http\client.py", line 1229, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\http\client.py", line 1275, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\http\client.py", line 1224, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\http\client.py", line 1016, in _send_output
+    self.send(msg)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\http\client.py", line 956, in send
+    self.connect()
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x00000231EF4E2630>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\adapters.py", line 440, in send
+    timeout=timeout
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='172.16.35.218', port=8806): Max retries exceeded with url: /ivh-alarm-api/alarmHandlingList (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000231EF4E2630>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\cases\test_cases.py", line 85, in test_cases
+    swapper=eval(swapper) if swapper else None, indicator=indicator if indicator else None)
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 52, in __init__
+    self._response = requests.post(self._path, data=self._data, json=self._json, headers=self._headers)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='172.16.35.218', port=8806): Max retries exceeded with url: /ivh-alarm-api/alarmHandlingList (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000231EF4E2630>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+[2018-12-21 14:56:08]: [test_cases.py] [INFO] [107] Cases Fail ! tc01-alarm handling list:this test case is to verify user is able to get alarm handling list with all valid input when DB is blank failed,  some error hit in test scripts, please contact QA team for more help!
+[2018-12-21 14:56:08]: [test_cases.py] [ERROR] [109] HTTPConnectionPool(host='172.16.35.218', port=8806): Max retries exceeded with url: /ivh-alarm-api/alarmHandlingList (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002057FEA1588>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+Traceback (most recent call last):
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\http\client.py", line 1229, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\http\client.py", line 1275, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\http\client.py", line 1224, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\http\client.py", line 1016, in _send_output
+    self.send(msg)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\http\client.py", line 956, in send
+    self.connect()
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000002057FEA1588>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\adapters.py", line 440, in send
+    timeout=timeout
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='172.16.35.218', port=8806): Max retries exceeded with url: /ivh-alarm-api/alarmHandlingList (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002057FEA1588>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\cases\test_cases.py", line 85, in test_cases
+    swapper=eval(swapper) if swapper else None, indicator=indicator if indicator else None)
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\ncsqa\qainterface.py", line 52, in __init__
+    self._response = requests.post(self._path, data=self._data, json=self._json, headers=self._headers)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "c:\users\p1210945\appdata\local\programs\python\python37\lib\site-packages\requests\adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='172.16.35.218', port=8806): Max retries exceeded with url: /ivh-alarm-api/alarmHandlingList (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002057FEA1588>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))

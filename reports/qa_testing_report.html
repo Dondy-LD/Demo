@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Test Report</title>
+    <link href="assets/style.css" rel="stylesheet" type="text/css"/></head>
+  <body onLoad="init()">
+    <script>/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this file,
+ * You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+
+function toArray(iter) {
+    if (iter === null) {
+        return null;
+    }
+    return Array.prototype.slice.call(iter);
+}
+
+function find(selector, elem) {
+    if (!elem) {
+        elem = document;
+    }
+    return elem.querySelector(selector);
+}
+
+function find_all(selector, elem) {
+    if (!elem) {
+        elem = document;
+    }
+    return toArray(elem.querySelectorAll(selector));
+}
+
+function sort_column(elem) {
+    toggle_sort_states(elem);
+    var colIndex = toArray(elem.parentNode.childNodes).indexOf(elem);
+    var key;
+    if (elem.classList.contains('numeric')) {
+        key = key_num;
+    } else if (elem.classList.contains('result')) {
+        key = key_result;
+    } else {
+        key = key_alpha;
+    }
+    sort_table(elem, key(colIndex));
+}
+
+function show_all_extras() {
+    find_all('.col-result').forEach(show_extras);
+}
+
+function hide_all_extras() {
+    find_all('.col-result').forEach(hide_extras);
+}
+
+function show_extras(colresult_elem) {
+    var extras = colresult_elem.parentNode.nextElementSibling;
+    var expandcollapse = colresult_elem.firstElementChild;
+    extras.classList.remove("collapsed");
+    expandcollapse.classList.remove("expander");
+    expandcollapse.classList.add("collapser");
+}
+
+function hide_extras(colresult_elem) {
+    var extras = colresult_elem.parentNode.nextElementSibling;
+    var expandcollapse = colresult_elem.firstElementChild;
+    extras.classList.add("collapsed");
+    expandcollapse.classList.remove("collapser");
+    expandcollapse.classList.add("expander");
+}
+
+function show_filters() {
+    var filter_items = document.getElementsByClassName('filter');
+    for (var i = 0; i < filter_items.length; i++)
+        filter_items[i].hidden = false;
+}
+
+function add_collapse() {
+    // Add links for show/hide all
+    var resulttable = find('table#results-table');
+    var showhideall = document.createElement("p");
+    showhideall.innerHTML = '<a href="javascript:show_all_extras()">Show all details</a> / ' +
+                            '<a href="javascript:hide_all_extras()">Hide all details</a>';
+    resulttable.parentElement.insertBefore(showhideall, resulttable);
+
+    // Add show/hide link to each result
+    find_all('.col-result').forEach(function(elem) {
+        var collapsed = get_query_parameter('collapsed') || 'Passed';
+        var extras = elem.parentNode.nextElementSibling;
+        var expandcollapse = document.createElement("span");
+        if (collapsed.includes(elem.innerHTML)) {
+            extras.classList.add("collapsed");
+            expandcollapse.classList.add("expander");
+        } else {
+            expandcollapse.classList.add("collapser");
+        }
+        elem.appendChild(expandcollapse);
+
+        elem.addEventListener("click", function(event) {
+            if (event.currentTarget.parentNode.nextElementSibling.classList.contains("collapsed")) {
+                show_extras(event.currentTarget);
+            } else {
+                hide_extras(event.currentTarget);
+            }
+        });
+    })
+}
+
+function get_query_parameter(name) {
+    var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+    return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+}
+
+function init () {
+    reset_sort_headers();
+
+    add_collapse();
+
+    show_filters();
+
+    toggle_sort_states(find('.initial-sort'));
+
+    find_all('.sortable').forEach(function(elem) {
+        elem.addEventListener("click",
+                              function(event) {
+                                  sort_column(elem);
+                              }, false)
+    });
+
+};
+
+function sort_table(clicked, key_func) {
+    var rows = find_all('.results-table-row');
+    var reversed = !clicked.classList.contains('asc');
+    var sorted_rows = sort(rows, key_func, reversed);
+    /* Whole table is removed here because browsers acts much slower
+     * when appending existing elements.
+     */
+    var thead = document.getElementById("results-table-head");
+    document.getElementById('results-table').remove();
+    var parent = document.createElement("table");
+    parent.id = "results-table";
+    parent.appendChild(thead);
+    sorted_rows.forEach(function(elem) {
+        parent.appendChild(elem);
+    });
+    document.getElementsByTagName("BODY")[0].appendChild(parent);
+}
+
+function sort(items, key_func, reversed) {
+    var sort_array = items.map(function(item, i) {
+        return [key_func(item), i];
+    });
+    var multiplier = reversed ? -1 : 1;
+
+    sort_array.sort(function(a, b) {
+        var key_a = a[0];
+        var key_b = b[0];
+        return multiplier * (key_a >= key_b ? 1 : -1);
+    });
+
+    return sort_array.map(function(item) {
+        var index = item[1];
+        return items[index];
+    });
+}
+
+function key_alpha(col_index) {
+    return function(elem) {
+        return elem.childNodes[1].childNodes[col_index].firstChild.data.toLowerCase();
+    };
+}
+
+function key_num(col_index) {
+    return function(elem) {
+        return parseFloat(elem.childNodes[1].childNodes[col_index].firstChild.data);
+    };
+}
+
+function key_result(col_index) {
+    return function(elem) {
+        var strings = ['Error', 'Failed', 'Rerun', 'XFailed', 'XPassed',
+                       'Skipped', 'Passed'];
+        return strings.indexOf(elem.childNodes[1].childNodes[col_index].firstChild.data);
+    };
+}
+
+function reset_sort_headers() {
+    find_all('.sort-icon').forEach(function(elem) {
+        elem.parentNode.removeChild(elem);
+    });
+    find_all('.sortable').forEach(function(elem) {
+        var icon = document.createElement("div");
+        icon.className = "sort-icon";
+        icon.textContent = "vvv";
+        elem.insertBefore(icon, elem.firstChild);
+        elem.classList.remove("desc", "active");
+        elem.classList.add("asc", "inactive");
+    });
+}
+
+function toggle_sort_states(elem) {
+    //if active, toggle between asc and desc
+    if (elem.classList.contains('active')) {
+        elem.classList.toggle('asc');
+        elem.classList.toggle('desc');
+    }
+
+    //if inactive, reset all other functions and add ascending active
+    if (elem.classList.contains('inactive')) {
+        reset_sort_headers();
+        elem.classList.remove('inactive');
+        elem.classList.add('active');
+    }
+}
+
+function is_all_rows_hidden(value) {
+  return value.hidden == false;
+}
+
+function filter_table(elem) {
+    var outcome_att = "data-test-result";
+    var outcome = elem.getAttribute(outcome_att);
+    class_outcome = outcome + " results-table-row";
+    var outcome_rows = document.getElementsByClassName(class_outcome);
+
+    for(var i = 0; i < outcome_rows.length; i++){
+        outcome_rows[i].hidden = !elem.checked;
+    }
+
+    var rows = find_all('.results-table-row').filter(is_all_rows_hidden);
+    var all_rows_hidden = rows.length == 0 ? true : false;
+    var not_found_message = document.getElementById("not-found-message");
+    not_found_message.hidden = !all_rows_hidden;
+}
+</script>
+    <h1>qa_testing_report.html</h1>
+    <p>Report generated on 15-May-2020 at 17:27:41 by<a href="https://pypi.python.org/pypi/pytest-html"> pytest-html</a> v1.19.0</p>
+    <h2>Environment</h2>
+    <table id="environment">
+      <tr>
+        <td>Packages</td>
+        <td>{&apos;pytest&apos;: &apos;3.6.0&apos;, &apos;py&apos;: &apos;1.5.3&apos;, &apos;pluggy&apos;: &apos;0.6.0&apos;}</td></tr>
+      <tr>
+        <td>Platform</td>
+        <td>Windows-10-10.0.17763-SP0</td></tr>
+      <tr>
+        <td>Plugins</td>
+        <td>{&apos;metadata&apos;: &apos;1.7.0&apos;, &apos;html&apos;: &apos;1.19.0&apos;}</td></tr>
+      <tr>
+        <td>Python</td>
+        <td>3.7.6</td></tr></table>
+    <h2>Summary</h2>
+    <p>5 tests ran in 3.39 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">4 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">1 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <h2>Results</h2>
+    <table id="results-table">
+      <thead id="results-table-head">
+        <tr>
+          <th class="sortable result initial-sort" col="result">Result</th>
+          <th class="sortable" col="name">Test</th>
+          <th class="sortable numeric" col="duration">Duration</th>
+          <th>Links</th></tr>
+        <tr hidden="true" id="not-found-message">
+          <th colspan="4">No results found. Try to check the filters</th></tr></thead>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">cases/test_cases.py::TestCases::()::test_cases[Updatedevice-01]</td>
+          <td class="col-duration">0.18</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;test_cases.TestCases object at 0x00000230323C0BC8&gt;<br/>case_id = &#x27;Updatedevice-01&#x27;<br/>case_purpose = &#x27;this test case is to verify system update an existing device in VMS successfully when device id is valid and update all field&#x27;<br/>request_method = &#x27;put&#x27;, request_url = &#x27;/vms/device/devices/{deviceId}&#x27;<br/>request_param = &#x27;{&quot;json-data&quot;:{\n\t&quot;name&quot;: &quot;devicetest_update&quot;,\n\t&quot;uri&quot;: &quot;rtsp://10.20.5.30:8082&quot;, \n\t&quot;username&quot;: &quot;admin1&quot;,\n\t&quot;password&quot;: &quot;qazWSXedcRFV&quot;,\n\t&quot;model&quot;: &quot;general-rtsp&quot;,\n\t&quot;lastUpdatedId&quot;: &quot;superadmin&quot;\n}}&#x27;<br/>expected_statuscd = 200.0<br/>expected_response = &#x27;{\n    &quot;status&quot;: 200,\n    &quot;message&quot;: &quot;Updated successfully.&quot;\n}&#x27;<br/>validation_query = &quot;SELECT * FROM [IVH_DB].[dbo].[IVH_VMS_DEVICE] WHERE [DEVICE_NAME] =&#x27;devicetest_update&#x27;&quot;<br/>expected_validation_result = 1.0, case_type = &#x27;update_device&#x27;<br/>swapper = &quot;{&#x27;{deviceId}&#x27;: &#x27;5d573474ddfe4e91b189e7ce0d78b32c&#x27;}&quot;<br/>indicator = &#x27;path&#x27;, pre_sql = &#x27;&#x27;, pre_mongodb = &#x27;&#x27;<br/><br/>    def test_cases(self, case_id,  case_purpose, request_method, request_url, request_param,<br/>                   expected_statuscd, expected_response, validation_query, expected_validation_result, case_type, swapper, indicator, pre_sql, pre_mongodb):<br/>        # noinspection PyBroadException<br/>        try:<br/>            # Execute Sql to prepare the test data per test case. pre_sql can be a query as string or a list of queries.<br/>            if pre_sql:<br/>                sql = eval(pre_sql)<br/>                if isinstance(sql, str):<br/>                    qc.exec_SQL_script(&quot;mssql&quot;, sql)<br/>                elif isinstance(sql, list):<br/>                    for items in sql:<br/>                        qc.exec_SQL_script(&quot;mssql&quot;, items)<br/>                self.logging.info(&quot;Precondition SQL executed for this test case.&quot;)<br/>            if pre_mongodb:<br/>                mongodb_data = eval(pre_mongodb)<br/>                if isinstance(mongodb_data, dict):<br/>                    method = mongodb_data.get(&quot;method&quot;)<br/>                    if method ==&quot;delete&quot;:<br/>                        mongodb_tc.delete(mongodb_data.get(&quot;database_name&quot;), mongodb_data.get(&quot;collection_name&quot;),<br/>                                       mongodb_data.get(&quot;key_field&quot;))<br/>    <br/>            # Step2:  Send request and get response<br/>            response = qainterface.InterFace(request_method, request_url,<br/>                                             headers=eval(request_param).get(&quot;headers&quot;) if request_param else None,<br/>                                             param=eval(request_param).get(&quot;param&quot;) if request_param else None,<br/>                                             data=eval(request_param).get(&quot;data&quot;) if request_param else None,<br/>                                             files=eval(request_param).get(&quot;filepath&quot;) if request_param else None,<br/>                                             json=eval(request_param).get(&quot;json-data&quot;) if request_param else None,<br/>                                             swapper=eval(swapper) if swapper else None,<br/>                                             indicator=indicator if indicator else None)<br/>            self.logging.debug(&quot;the response for case %s is %s&quot; % (case_id, response.responsetext))<br/>    <br/>            # Step3: Get response to do common validation<br/>    <br/>&gt;           comvalidation.common_validation(response, expected_statuscd, expected_response)<br/><br/>cases\test_cases.py:108: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>response = &lt;ncsqa.qainterface.InterFace object at 0x00000230323EB3C8&gt;<br/>expectedstatuscd = 200.0<br/>expected_response = &#x27;{\n    &quot;status&quot;: 200,\n    &quot;message&quot;: &quot;Updated successfully.&quot;\n}&#x27;<br/><br/>    def common_validation(response, expectedstatuscd, expected_response):<br/>        if response.httpstatuscd != int(expectedstatuscd):<br/>            raise AssertionError(&quot;Common validation is fail, the expected result g is %s, but the actual result g is %s&quot; % (<br/>            (int(expectedstatuscd)), response.httpstatuscd))<br/>        elif len(expected_response) != 0:<br/>            post_status = response.responsejson.get(&quot;status&quot;)<br/>            expected_response_status = int(eval(expected_response).get(&quot;status&quot;))<br/>            if post_status != expected_response_status:<br/>                raise AssertionError(&quot;Common validation is fail, the expected status is %s, but the actual status is %s&quot;<br/>&gt;                                    % (expected_response_status, post_status))<br/><span class="error">E               AssertionError: Common validation is fail, the expected status is 200, but the actual status is 404</span><br/><br/>validation\comvalidation.py:13: AssertionError<br/><br/>During handling of the above exception, another exception occurred:<br/><br/>self = &lt;test_cases.TestCases object at 0x00000230323C0BC8&gt;<br/>case_id = &#x27;Updatedevice-01&#x27;<br/>case_purpose = &#x27;this test case is to verify system update an existing device in VMS successfully when device id is valid and update all field&#x27;<br/>request_method = &#x27;put&#x27;, request_url = &#x27;/vms/device/devices/{deviceId}&#x27;<br/>request_param = &#x27;{&quot;json-data&quot;:{\n\t&quot;name&quot;: &quot;devicetest_update&quot;,\n\t&quot;uri&quot;: &quot;rtsp://10.20.5.30:8082&quot;, \n\t&quot;username&quot;: &quot;admin1&quot;,\n\t&quot;password&quot;: &quot;qazWSXedcRFV&quot;,\n\t&quot;model&quot;: &quot;general-rtsp&quot;,\n\t&quot;lastUpdatedId&quot;: &quot;superadmin&quot;\n}}&#x27;<br/>expected_statuscd = 200.0<br/>expected_response = &#x27;{\n    &quot;status&quot;: 200,\n    &quot;message&quot;: &quot;Updated successfully.&quot;\n}&#x27;<br/>validation_query = &quot;SELECT * FROM [IVH_DB].[dbo].[IVH_VMS_DEVICE] WHERE [DEVICE_NAME] =&#x27;devicetest_update&#x27;&quot;<br/>expected_validation_result = 1.0, case_type = &#x27;update_device&#x27;<br/>swapper = &quot;{&#x27;{deviceId}&#x27;: &#x27;5d573474ddfe4e91b189e7ce0d78b32c&#x27;}&quot;<br/>indicator = &#x27;path&#x27;, pre_sql = &#x27;&#x27;, pre_mongodb = &#x27;&#x27;<br/><br/>    def test_cases(self, case_id,  case_purpose, request_method, request_url, request_param,<br/>                   expected_statuscd, expected_response, validation_query, expected_validation_result, case_type, swapper, indicator, pre_sql, pre_mongodb):<br/>        # noinspection PyBroadException<br/>        try:<br/>            # Execute Sql to prepare the test data per test case. pre_sql can be a query as string or a list of queries.<br/>            if pre_sql:<br/>                sql = eval(pre_sql)<br/>                if isinstance(sql, str):<br/>                    qc.exec_SQL_script(&quot;mssql&quot;, sql)<br/>                elif isinstance(sql, list):<br/>                    for items in sql:<br/>                        qc.exec_SQL_script(&quot;mssql&quot;, items)<br/>                self.logging.info(&quot;Precondition SQL executed for this test case.&quot;)<br/>            if pre_mongodb:<br/>                mongodb_data = eval(pre_mongodb)<br/>                if isinstance(mongodb_data, dict):<br/>                    method = mongodb_data.get(&quot;method&quot;)<br/>                    if method ==&quot;delete&quot;:<br/>                        mongodb_tc.delete(mongodb_data.get(&quot;database_name&quot;), mongodb_data.get(&quot;collection_name&quot;),<br/>                                       mongodb_data.get(&quot;key_field&quot;))<br/>    <br/>            # Step2:  Send request and get response<br/>            response = qainterface.InterFace(request_method, request_url,<br/>                                             headers=eval(request_param).get(&quot;headers&quot;) if request_param else None,<br/>                                             param=eval(request_param).get(&quot;param&quot;) if request_param else None,<br/>                                             data=eval(request_param).get(&quot;data&quot;) if request_param else None,<br/>                                             files=eval(request_param).get(&quot;filepath&quot;) if request_param else None,<br/>                                             json=eval(request_param).get(&quot;json-data&quot;) if request_param else None,<br/>                                             swapper=eval(swapper) if swapper else None,<br/>                                             indicator=indicator if indicator else None)<br/>            self.logging.debug(&quot;the response for case %s is %s&quot; % (case_id, response.responsetext))<br/>    <br/>            # Step3: Get response to do common validation<br/>    <br/>            comvalidation.common_validation(response, expected_statuscd, expected_response)<br/>    <br/>            # Step4: Special validation base on caseType<br/>            if case_type:<br/>                specialvalidation.special_validation(case_id, case_type, response, expected_response, validation_query, expected_validation_result)<br/>                self.logging.info(&quot;Cases Pass ! %s:%s passed&quot; % (case_id, case_purpose))<br/>    <br/>        except AssertionError as error:<br/>    <br/>            self.logging.info(&quot;Cases Fail ! %s:%s failed, the actual result is different with expected result&quot; % (case_id, case_purpose))<br/>    <br/>            self.logging.error(error)<br/>    <br/>&gt;           pytest.fail()<br/><span class="error">E           Failed: &lt;Failed instance&gt;</span><br/><br/>cases\test_cases.py:121: Failed<br/>------------------------------ Captured log call -------------------------------<br/>connectionpool.py          208 DEBUG    Starting new HTTP connection (1): 172.16.35.218
+connectionpool.py          396 DEBUG    http://172.16.35.218:8807 &quot;PUT /vms/device/devices/5d573474ddfe4e91b189e7ce0d78b32c HTTP/1.1&quot; 200 None
+test_cases.py              104 DEBUG    the response for case Updatedevice-01 is {&quot;status&quot;:404,&quot;message&quot;:&quot;device not exist&quot;,&quot;data&quot;:null,&quot;rel&quot;:false}
+test_cases.py              117 INFO     Cases Fail ! Updatedevice-01:this test case is to verify system update an existing device in VMS successfully when device id is valid and update all field failed, the actual result is different with expected result
+test_cases.py              119 ERROR    Common validation is fail, the expected status is 200, but the actual status is 404</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">cases/test_cases.py::TestCases::()::test_precondition[Pre_addDevice_01]</td>
+          <td class="col-duration">0.29</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">------------------------------ Captured log call -------------------------------<br/>connectionpool.py          208 DEBUG    Starting new HTTP connection (1): 172.16.35.218
+connectionpool.py          396 DEBUG    http://172.16.35.218:8807 &quot;POST /vms/device/devices HTTP/1.1&quot; 200 None
+test_cases.py               64 INFO     Precondition Pass ! test case Pre_addDevice_01 passed</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">cases/test_cases.py::TestCases::()::test_precondition[Pre_addDevice_02]</td>
+          <td class="col-duration">0.18</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">------------------------------ Captured log call -------------------------------<br/>connectionpool.py          208 DEBUG    Starting new HTTP connection (1): 172.16.35.218
+connectionpool.py          396 DEBUG    http://172.16.35.218:8807 &quot;POST /vms/device/devices HTTP/1.1&quot; 200 None
+test_cases.py               64 INFO     Precondition Pass ! test case Pre_addDevice_02 passed</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">cases/test_cases.py::TestCases::()::test_precondition[Updatedevice-01]</td>
+          <td class="col-duration">0.29</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">------------------------------ Captured log call -------------------------------<br/>connectionpool.py          208 DEBUG    Starting new HTTP connection (1): 172.16.35.218
+connectionpool.py          396 DEBUG    http://172.16.35.218:8807 &quot;POST /vms/device/videoDeviceList HTTP/1.1&quot; 200 None
+test_cases.py               64 INFO     Precondition Pass ! test case Updatedevice-01 passed</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">cases/test_cases.py::TestCases::()::test_teardown[Updatedevice-01]</td>
+          <td class="col-duration">0.17</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">------------------------------ Captured log call -------------------------------<br/>connectionpool.py          208 DEBUG    Starting new HTTP connection (1): 172.16.35.218
+connectionpool.py          396 DEBUG    http://172.16.35.218:8807 &quot;DELETE /vms/device/devices/5d573474ddfe4e91b189e7ce0d78b32c HTTP/1.1&quot; 200 None
+test_cases.py              144 INFO     Teardown Pass ! test case Updatedevice-01 passed</div></td></tr></tbody></table></body></html>

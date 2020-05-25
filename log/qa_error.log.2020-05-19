@@ -1,0 +1,58 @@
+[2020-05-19 09:52:48]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected result g is 404, but the actual result g is 200
+[2020-05-19 09:52:49]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected result g is 404, but the actual result g is 200
+[2020-05-19 10:00:21]: [test_cases.py] [ERROR] [124] validate_psize validation for message is fail, the expected result is {
+      "status": 200,
+      "message": "SUCCESS",
+      "rel": True
+}, but the actual result is {'status': 200, 'message': 'SUCCESS', 'rel': False}
+[2020-05-19 10:00:21]: [test_cases.py] [ERROR] [124] validate_psize validation for message is fail, the expected result is {
+      "status": 200,
+      "message": "SUCCESS",
+      "rel": True
+}, but the actual result is {'status': 200, 'message': 'SUCCESS', 'rel': False}
+[2020-05-19 10:00:22]: [test_cases.py] [ERROR] [124] validate_psize validation for message is fail, the expected result is {
+    "status": 404,
+    "message": "device channel not exist",
+    "rel": False
+}, but the actual result is {'status': 404, 'message': 'device not exist', 'rel': False}
+[2020-05-19 10:00:22]: [test_cases.py] [ERROR] [124] validate_psize validation for message is fail, the expected result is {
+    "status": 404,
+    "message": "device channel not exist",
+    "rel": False
+}, but the actual result is {'status': 404, 'message': 'device not exist', 'rel': False}
+[2020-05-19 10:29:32]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 200, but the actual status is 404
+[2020-05-19 10:29:32]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 200, but the actual status is 404
+[2020-05-19 10:29:33]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 400, but the actual status is 404
+[2020-05-19 10:29:33]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 400, but the actual status is 404
+[2020-05-19 11:25:55]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-19 11:25:55]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-19 11:25:56]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-19 11:25:56]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-19 11:26:01]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-19 11:26:01]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-19 11:26:02]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-19 11:26:02]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-19 11:26:04]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-19 11:26:04]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-19 11:26:05]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-19 11:26:05]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-19 11:26:08]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-19 11:26:08]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-19 11:26:09]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-19 11:26:09]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-19 14:45:47]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-19 14:45:47]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-19 14:45:48]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-19 14:45:48]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-19 14:45:52]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-19 14:45:52]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-19 14:45:53]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-19 14:45:53]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-19 14:45:55]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-19 14:45:55]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-19 14:45:56]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-19 14:45:56]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-19 14:45:59]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-19 14:45:59]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-19 14:46:00]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 400, but the actual status is 200
+[2020-05-19 14:46:00]: [test_cases.py] [ERROR] [124] Common validation is fail, the expected status is 400, but the actual status is 200

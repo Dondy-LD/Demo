@@ -1,0 +1,3 @@
+connectionpool.py          208 DEBUG    Starting new HTTP connection (1): 172.16.35.218
+connectionpool.py          396 DEBUG    http://172.16.35.218:8807 "POST /vms/device/deviceIcon/upload HTTP/1.1" 200 None
+test_cases.py               65 INFO     Precondition Pass ! test case saveDeviceIcon-01 passed

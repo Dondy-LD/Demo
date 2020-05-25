@@ -1,0 +1,8 @@
+[2018-12-31 11:02:16]: [test_cases.py] [INFO] [106] Cases Fail ! createGroup-05:this test case is to verify system is able to handle add group record into DB with special simbol in the string failed, the actual result is different with expected result
+[2018-12-31 11:02:16]: [test_cases.py] [ERROR] [108] Common validation is fail, the expected result is 500, but the actual result is 200
+[2018-12-31 11:04:38]: [test_cases.py] [INFO] [106] Cases Fail ! createGroup-05:this test case is to verify system is able to handle add group record into DB with special simbol in the string failed, the actual result is different with expected result
+[2018-12-31 11:04:38]: [test_cases.py] [ERROR] [108] Common validation is fail, the expected result is 500, but the actual result is 200
+[2018-12-31 11:11:42]: [test_cases.py] [INFO] [106] Cases Fail ! createGroup-06:this test case is to verify system is able to handle add group record into DB with partial necessary field failed, the actual result is different with expected result
+[2018-12-31 11:11:42]: [test_cases.py] [ERROR] [108] Common validation is fail, the expected result is 500, but the actual result is 200
+[2018-12-31 11:20:11]: [test_cases.py] [INFO] [106] Cases Fail ! createGroup-07:this test case is to verify system is able to handle add group record but no body value  failed, the actual result is different with expected result
+[2018-12-31 11:20:11]: [test_cases.py] [ERROR] [108] Common validation is fail, the expected result is 400, but the actual result is 200

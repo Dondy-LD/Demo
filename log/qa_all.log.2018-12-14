@@ -1,0 +1,83 @@
+[2018-12-14 09:21:20]: [test_cases.py] [INFO] [98] Cases Fail ! tc30-SearchSubscribeSetting:this test case is to verify  system is able to search subscribe setting successfully failed, the actual result is different with expected result
+[2018-12-14 09:21:20]: [test_cases.py] [ERROR] [100] Common validation is fail, the expected result is 200, but the actual result is 404
+[2018-12-14 09:30:33]: [test_cases.py] [INFO] [98] Cases Fail ! tc30-SearchSubscribeSetting:this test case is to verify  system is able to search subscribe setting successfully failed, the actual result is different with expected result
+[2018-12-14 09:30:33]: [test_cases.py] [ERROR] [100] Common validation is fail, the expected result is 200, but the actual result is 404
+[2018-12-14 09:32:15]: [test_cases.py] [INFO] [98] Cases Fail ! tc30-SearchSubscribeSetting:this test case is to verify  system is able to search subscribe setting successfully failed, the actual result is different with expected result
+[2018-12-14 09:32:15]: [test_cases.py] [ERROR] [100] Common validation is fail, the expected result is 200, but the actual result is 404
+[2018-12-14 10:31:45]: [test_cases.py] [INFO] [106] Cases Fail ! tc36-SubscribeSettingSave:this test case is to verify system is able to create a new  subscribe Setting successfully failed,  some error hit in test scripts, please contact QA team for more help!
+[2018-12-14 10:31:45]: [test_cases.py] [ERROR] [108] name 'null' is not defined
+Traceback (most recent call last):
+  File "D:\IVH_Project\UMMI\API\Alarm\qa-ummi-alarm-service-testing\cases\test_cases.py", line 80, in test_cases
+    headers=eval(request_param).get("headers") if request_param else None,
+  File "<string>", line 2, in <module>
+NameError: name 'null' is not defined
+[2018-12-14 10:33:46]: [test_cases.py] [INFO] [106] Cases Fail ! tc36-SubscribeSettingSave:this test case is to verify system is able to create a new  subscribe Setting successfully failed,  some error hit in test scripts, please contact QA team for more help!
+[2018-12-14 10:33:46]: [test_cases.py] [ERROR] [108] name 'null' is not defined
+Traceback (most recent call last):
+  File "D:\IVH_Project\UMMI\API\Alarm\qa-ummi-alarm-service-testing\cases\test_cases.py", line 80, in test_cases
+    headers=eval(request_param).get("headers") if request_param else None,
+  File "<string>", line 2, in <module>
+NameError: name 'null' is not defined
+[2018-12-14 10:37:53]: [test_cases.py] [INFO] [98] Cases Fail ! tc36-SubscribeSettingSave:this test case is to verify system is able to create a new  subscribe Setting successfully failed, the actual result is different with expected result
+[2018-12-14 10:37:53]: [test_cases.py] [ERROR] [100] Common validation is fail, the expected result is 200, but the actual result is 400
+[2018-12-14 11:05:39]: [test_cases.py] [INFO] [98] Cases Fail ! tc37-SubscribeSettingSave:this test case is to verify system is able to update a subscribe Setting successfully failed, the actual result is different with expected result
+[2018-12-14 11:05:39]: [test_cases.py] [ERROR] [100] Common validation is fail, the expected result is 200, but the actual result is 400
+[2018-12-14 11:07:31]: [test_cases.py] [INFO] [106] Cases Fail ! tc41-UpdateAlarm:this test case is to verify system is able to update alarm successfully failed,  some error hit in test scripts, please contact QA team for more help!
+[2018-12-14 11:07:31]: [test_cases.py] [ERROR] [108] invalid syntax (<string>, line 3)
+Traceback (most recent call last):
+  File "D:\IVH_Project\UMMI\API\Alarm\qa-ummi-alarm-service-testing\cases\test_cases.py", line 80, in test_cases
+    headers=eval(request_param).get("headers") if request_param else None,
+  File "<string>", line 3
+    "alarmName:"test",
+                   ^
+SyntaxError: invalid syntax
+[2018-12-14 11:09:45]: [test_cases.py] [INFO] [98] Cases Fail ! tc41-UpdateAlarm:this test case is to verify system is able to update alarm successfully failed, the actual result is different with expected result
+[2018-12-14 11:09:45]: [test_cases.py] [ERROR] [100] Common validation is fail, the expected result is 200, but the actual result is 500
+[2018-12-14 13:26:48]: [test_cases.py] [INFO] [106] Cases Fail ! tc46-updateAlarmDetails:this test case is to verify system is able to update Alarm Details successfully failed,  some error hit in test scripts, please contact QA team for more help!
+[2018-12-14 13:31:08]: [test_cases.py] [INFO] [106] Cases Fail ! tc46-updateAlarmDetails:this test case is to verify system is able to update Alarm Details successfully failed,  some error hit in test scripts, please contact QA team for more help!
+[2018-12-14 13:41:01]: [test_cases.py] [INFO] [98] Cases Fail ! tc51-updateAlarmDetails:this test case is to verify system  is able to handle update Alarm Details with invalid status code failed, the actual result is different with expected result
+[2018-12-14 13:41:01]: [test_cases.py] [ERROR] [100] Common validation is fail, the expected result is 500, but the actual result is 200
+[2018-12-14 13:58:34]: [test_cases.py] [INFO] [98] Cases Fail ! tc01-alarm handling list:this test case is to verify user is able to get alarm handling list with all valid input when DB is blank failed, the actual result is different with expected result
+[2018-12-14 13:58:34]: [test_cases.py] [ERROR] [100] Common validation is fail, the expected result is 200, but the actual result is 404
+[2018-12-14 13:58:35]: [test_cases.py] [INFO] [98] Cases Fail ! tc46-updateAlarmDetails:this test case is to verify system is able to update Alarm Details successfully failed, the actual result is different with expected result
+[2018-12-14 13:58:35]: [test_cases.py] [ERROR] [100] Common validation is fail, the expected result is 200, but the actual result is 404
+[2018-12-14 13:58:50]: [test_cases.py] [INFO] [98] Cases Fail ! tc01-alarm handling list:this test case is to verify user is able to get alarm handling list with all valid input when DB is blank failed, the actual result is different with expected result
+[2018-12-14 13:58:50]: [test_cases.py] [ERROR] [100] Common validation is fail, the expected result is 200, but the actual result is 404
+[2018-12-14 13:58:50]: [test_cases.py] [INFO] [98] Cases Fail ! tc46-updateAlarmDetails:this test case is to verify system is able to update Alarm Details successfully failed, the actual result is different with expected result
+[2018-12-14 13:58:50]: [test_cases.py] [ERROR] [100] Common validation is fail, the expected result is 200, but the actual result is 404
+[2018-12-14 14:02:16]: [test_cases.py] [INFO] [98] Cases Fail ! tc46-updateAlarmDetails:this test case is to verify system is able to update Alarm Details successfully failed, the actual result is different with expected result
+[2018-12-14 14:02:16]: [test_cases.py] [ERROR] [100] Common validation is fail, the expected result is 200, but the actual result is 404
+[2018-12-14 14:02:51]: [test_cases.py] [INFO] [98] Cases Fail ! tc46-updateAlarmDetails:this test case is to verify system is able to update Alarm Details successfully failed, the actual result is different with expected result
+[2018-12-14 14:02:51]: [test_cases.py] [ERROR] [100] Common validation is fail, the expected result is 200, but the actual result is 404
+[2018-12-14 14:20:08]: [test_cases.py] [INFO] [98] Cases Fail ! tc47-updateAlarmDetails:this test case is to verify system  is able to handle update Alarm Details with partial info failed, the actual result is different with expected result
+[2018-12-14 14:20:08]: [test_cases.py] [ERROR] [100] Common validation is fail, the expected result is 400, but the actual result is 200
+[2018-12-14 14:38:15]: [test_cases.py] [INFO] [98] Cases Fail ! tc47-updateAlarmDetails:this test case is to verify system  is able to handle update Alarm Details with partial info failed, the actual result is different with expected result
+[2018-12-14 14:38:15]: [test_cases.py] [ERROR] [100] Common validation is fail, the expected result is 400, but the actual result is 200
+[2018-12-14 14:38:15]: [test_cases.py] [INFO] [98] Cases Fail ! tc48-updateAlarmDetails:this test case is to verify system  is able to handle update Alarm Details with id not exist  failed, the actual result is different with expected result
+[2018-12-14 14:38:15]: [test_cases.py] [ERROR] [100] Common validation is fail, the expected result is 500, but the actual result is 200
+[2018-12-14 14:58:27]: [test_cases.py] [INFO] [98] Cases Fail ! tc47-updateAlarmDetails:this test case is to verify system  is able to handle update Alarm Details with partial info failed, the actual result is different with expected result
+[2018-12-14 14:58:27]: [test_cases.py] [ERROR] [100] Common validation is fail, the expected result is 400, but the actual result is 200
+[2018-12-14 14:58:27]: [test_cases.py] [INFO] [98] Cases Fail ! tc48-updateAlarmDetails:this test case is to verify system  is able to handle update Alarm Details with id not exist  failed, the actual result is different with expected result
+[2018-12-14 14:58:27]: [test_cases.py] [ERROR] [100] Common validation is fail, the expected result is 500, but the actual result is 200
+[2018-12-14 15:02:06]: [test_cases.py] [INFO] [98] Cases Fail ! tc49-updateAlarmDetails:this test case is to verify system  is able to handle update Alarm Details iwith invalid id format failed, the actual result is different with expected result
+[2018-12-14 15:02:06]: [test_cases.py] [ERROR] [100] Common validation is fail, the expected result is 500, but the actual result is 200
+[2018-12-14 15:02:39]: [test_cases.py] [INFO] [106] Cases Fail ! tc49-updateAlarmDetails:this test case is to verify system  is able to handle update Alarm Details iwith invalid id format failed,  some error hit in test scripts, please contact QA team for more help!
+[2018-12-14 15:02:39]: [test_cases.py] [ERROR] [108] invalid syntax (<string>, line 1)
+Traceback (most recent call last):
+  File "D:\IVH_Project\UMMI\API\Alarm\qa-ummi-alarm-service-testing\cases\test_cases.py", line 80, in test_cases
+    headers=eval(request_param).get("headers") if request_param else None,
+  File "<string>", line 1
+    {"json-data": {"alarmDetailsUuid":1@!#$344,"status": "A"}
+                                        ^
+SyntaxError: invalid syntax
+[2018-12-14 15:03:27]: [test_cases.py] [INFO] [106] Cases Fail ! tc49-updateAlarmDetails:this test case is to verify system  is able to handle update Alarm Details iwith invalid id format failed,  some error hit in test scripts, please contact QA team for more help!
+[2018-12-14 15:03:27]: [test_cases.py] [ERROR] [108] invalid token (<string>, line 1)
+Traceback (most recent call last):
+  File "D:\IVH_Project\UMMI\API\Alarm\qa-ummi-alarm-service-testing\cases\test_cases.py", line 80, in test_cases
+    headers=eval(request_param).get("headers") if request_param else None,
+  File "<string>", line 1
+    {"json-data": {"alarmDetailsUuid":2018-09-25 15:38:56.407,"status": "A"}
+                                            ^
+SyntaxError: invalid token
+[2018-12-14 15:04:13]: [test_cases.py] [INFO] [98] Cases Fail ! tc49-updateAlarmDetails:this test case is to verify system  is able to handle update Alarm Details iwith invalid id format failed, the actual result is different with expected result
+[2018-12-14 15:04:13]: [test_cases.py] [ERROR] [100] Common validation is fail, the expected result is 500, but the actual result is 200

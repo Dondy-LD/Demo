@@ -1,0 +1,11 @@
+[2020-05-11 10:16:29]: [test_cases.py] [ERROR] [120] validate_vms_device() missing 1 required positional argument: 'expected_validation_result'
+Traceback (most recent call last):
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\cases\test_cases.py", line 105, in test_cases
+    specialvalidation.special_validation(case_id, case_type, response, expected_response, validation_query, expected_validation_result)
+  File "C:\Users\p1321768\PycharmProjects\qa-ummi-device-service-testing\validation\specialvalidation.py", line 44, in special_validation
+    validate_vms_device(case_type, expected_validation_result)
+TypeError: validate_vms_device() missing 1 required positional argument: 'expected_validation_result'
+[2020-05-11 14:24:49]: [test_cases.py] [ERROR] [112] validate_psize validation for data is fail, the expected psize is 0, but the actual psize is 1
+[2020-05-11 14:24:49]: [test_cases.py] [ERROR] [112] validate_psize validation for data is fail, the expected psize is 0, but the actual psize is 1
+[2020-05-11 14:25:55]: [test_cases.py] [ERROR] [112] validate vms device for data is failed, the expected result is 0, but the actual result is 1
+[2020-05-11 14:25:55]: [test_cases.py] [ERROR] [112] validate vms device for data is failed, the expected result is 0, but the actual result is 1

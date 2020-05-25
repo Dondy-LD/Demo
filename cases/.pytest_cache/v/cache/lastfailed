@@ -1,0 +1,9 @@
+{
+  "test_cases.py": true,
+  "test_cases.py::TestCases::()::test_cases[GetDeviceTemplate-01]": true,
+  "test_cases.py::TestCases::()::test_cases[Getcurrentchannel-01]": true,
+  "test_cases.py::TestCases::()::test_cases[addMultipleDevice-01]": true,
+  "test_cases.py::TestCases::()::test_cases[saveDeviceIcon-01]": true,
+  "test_cases.py::TestCases::()::test_precondition[saveDeviceIcon-01]": true,
+  "test_cases.py::TestCases::()::test_teardown[Pre_addDevice_02]": true
+}

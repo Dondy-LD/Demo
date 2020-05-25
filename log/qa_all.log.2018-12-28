@@ -1,0 +1,132 @@
+[2018-12-28 10:50:50]: [test_cases.py] [INFO] [74] Precondition Fail ! test case getparentGroups-02 failed
+[2018-12-28 10:50:50]: [test_cases.py] [ERROR] [76] (2627, b"Violation of PRIMARY KEY constraint 'PK_IVH_CHANNEL_GROUP'. Cannot insert duplicate key in object 'dbo.IVH_CHANNEL_GROUP'. The duplicate key value is (00002).DB-Lib error message 20018, severity 14:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+Traceback (most recent call last):
+  File "src\pymssql.pyx", line 448, in pymssql.Cursor.execute
+  File "src\_mssql.pyx", line 1064, in _mssql.MSSQLConnection.execute_query
+  File "src\_mssql.pyx", line 1095, in _mssql.MSSQLConnection.execute_query
+  File "src\_mssql.pyx", line 1228, in _mssql.MSSQLConnection.format_and_run_query
+  File "src\_mssql.pyx", line 1639, in _mssql.check_cancel_and_raise
+  File "src\_mssql.pyx", line 1683, in _mssql.maybe_raise_MSSQLDatabaseException
+_mssql.MSSQLDatabaseException: (2627, b"Violation of PRIMARY KEY constraint 'PK_IVH_CHANNEL_GROUP'. Cannot insert duplicate key in object 'dbo.IVH_CHANNEL_GROUP'. The duplicate key value is (00002).DB-Lib error message 20018, severity 14:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\cases\test_cases.py", line 68, in test_precondition
+    qc.exec_SQL_script("mssql", query=eval(request_param).get("sql") if request_param else None)
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 38, in exec_SQL_script
+    db.execute_query(query)
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\ncsqa\qadatabasemssql.py", line 46, in execute_query
+    cursor.execute(query)
+  File "src\pymssql.pyx", line 467, in pymssql.Cursor.execute
+pymssql.IntegrityError: (2627, b"Violation of PRIMARY KEY constraint 'PK_IVH_CHANNEL_GROUP'. Cannot insert duplicate key in object 'dbo.IVH_CHANNEL_GROUP'. The duplicate key value is (00002).DB-Lib error message 20018, severity 14:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+[2018-12-28 10:52:42]: [test_cases.py] [INFO] [74] Precondition Fail ! test case getparentGroups-02 failed
+[2018-12-28 10:52:42]: [test_cases.py] [ERROR] [76] (2627, b"Violation of PRIMARY KEY constraint 'PK_IVH_CHANNEL_GROUP'. Cannot insert duplicate key in object 'dbo.IVH_CHANNEL_GROUP'. The duplicate key value is (00002).DB-Lib error message 20018, severity 14:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+Traceback (most recent call last):
+  File "src\pymssql.pyx", line 448, in pymssql.Cursor.execute
+  File "src\_mssql.pyx", line 1064, in _mssql.MSSQLConnection.execute_query
+  File "src\_mssql.pyx", line 1095, in _mssql.MSSQLConnection.execute_query
+  File "src\_mssql.pyx", line 1228, in _mssql.MSSQLConnection.format_and_run_query
+  File "src\_mssql.pyx", line 1639, in _mssql.check_cancel_and_raise
+  File "src\_mssql.pyx", line 1683, in _mssql.maybe_raise_MSSQLDatabaseException
+_mssql.MSSQLDatabaseException: (2627, b"Violation of PRIMARY KEY constraint 'PK_IVH_CHANNEL_GROUP'. Cannot insert duplicate key in object 'dbo.IVH_CHANNEL_GROUP'. The duplicate key value is (00002).DB-Lib error message 20018, severity 14:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\cases\test_cases.py", line 68, in test_precondition
+    qc.exec_SQL_script("mssql", query=eval(request_param).get("sql") if request_param else None)
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 38, in exec_SQL_script
+    db.execute_query(query)
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\ncsqa\qadatabasemssql.py", line 46, in execute_query
+    cursor.execute(query)
+  File "src\pymssql.pyx", line 467, in pymssql.Cursor.execute
+pymssql.IntegrityError: (2627, b"Violation of PRIMARY KEY constraint 'PK_IVH_CHANNEL_GROUP'. Cannot insert duplicate key in object 'dbo.IVH_CHANNEL_GROUP'. The duplicate key value is (00002).DB-Lib error message 20018, severity 14:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+[2018-12-28 10:55:16]: [test_cases.py] [INFO] [74] Precondition Fail ! test case getparentGroups-02 failed
+[2018-12-28 10:55:16]: [test_cases.py] [ERROR] [76] (2627, b"Violation of PRIMARY KEY constraint 'PK_IVH_CHANNEL_GROUP'. Cannot insert duplicate key in object 'dbo.IVH_CHANNEL_GROUP'. The duplicate key value is (00002).DB-Lib error message 20018, severity 14:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+Traceback (most recent call last):
+  File "src\pymssql.pyx", line 448, in pymssql.Cursor.execute
+  File "src\_mssql.pyx", line 1064, in _mssql.MSSQLConnection.execute_query
+  File "src\_mssql.pyx", line 1095, in _mssql.MSSQLConnection.execute_query
+  File "src\_mssql.pyx", line 1228, in _mssql.MSSQLConnection.format_and_run_query
+  File "src\_mssql.pyx", line 1639, in _mssql.check_cancel_and_raise
+  File "src\_mssql.pyx", line 1683, in _mssql.maybe_raise_MSSQLDatabaseException
+_mssql.MSSQLDatabaseException: (2627, b"Violation of PRIMARY KEY constraint 'PK_IVH_CHANNEL_GROUP'. Cannot insert duplicate key in object 'dbo.IVH_CHANNEL_GROUP'. The duplicate key value is (00002).DB-Lib error message 20018, severity 14:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\cases\test_cases.py", line 68, in test_precondition
+    qc.exec_SQL_script("mssql", query=eval(request_param).get("sql") if request_param else None)
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 38, in exec_SQL_script
+    db.execute_query(query)
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\ncsqa\qadatabasemssql.py", line 46, in execute_query
+    cursor.execute(query)
+  File "src\pymssql.pyx", line 467, in pymssql.Cursor.execute
+pymssql.IntegrityError: (2627, b"Violation of PRIMARY KEY constraint 'PK_IVH_CHANNEL_GROUP'. Cannot insert duplicate key in object 'dbo.IVH_CHANNEL_GROUP'. The duplicate key value is (00002).DB-Lib error message 20018, severity 14:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+[2018-12-28 10:56:21]: [test_cases.py] [INFO] [74] Precondition Fail ! test case getparentGroups-02 failed
+[2018-12-28 10:56:21]: [test_cases.py] [ERROR] [76] (2627, b"Violation of PRIMARY KEY constraint 'PK_IVH_CHANNEL_GROUP'. Cannot insert duplicate key in object 'dbo.IVH_CHANNEL_GROUP'. The duplicate key value is (00002).DB-Lib error message 20018, severity 14:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+Traceback (most recent call last):
+  File "src\pymssql.pyx", line 448, in pymssql.Cursor.execute
+  File "src\_mssql.pyx", line 1064, in _mssql.MSSQLConnection.execute_query
+  File "src\_mssql.pyx", line 1095, in _mssql.MSSQLConnection.execute_query
+  File "src\_mssql.pyx", line 1228, in _mssql.MSSQLConnection.format_and_run_query
+  File "src\_mssql.pyx", line 1639, in _mssql.check_cancel_and_raise
+  File "src\_mssql.pyx", line 1683, in _mssql.maybe_raise_MSSQLDatabaseException
+_mssql.MSSQLDatabaseException: (2627, b"Violation of PRIMARY KEY constraint 'PK_IVH_CHANNEL_GROUP'. Cannot insert duplicate key in object 'dbo.IVH_CHANNEL_GROUP'. The duplicate key value is (00002).DB-Lib error message 20018, severity 14:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\cases\test_cases.py", line 68, in test_precondition
+    qc.exec_SQL_script("mssql", query=eval(request_param).get("sql") if request_param else None)
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\ncsqa\qacommon.py", line 38, in exec_SQL_script
+    db.execute_query(query)
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\ncsqa\qadatabasemssql.py", line 46, in execute_query
+    cursor.execute(query)
+  File "src\pymssql.pyx", line 467, in pymssql.Cursor.execute
+pymssql.IntegrityError: (2627, b"Violation of PRIMARY KEY constraint 'PK_IVH_CHANNEL_GROUP'. Cannot insert duplicate key in object 'dbo.IVH_CHANNEL_GROUP'. The duplicate key value is (00002).DB-Lib error message 20018, severity 14:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+[2018-12-28 11:26:25]: [test_cases.py] [INFO] [106] Cases Fail ! createGroupMapping-03:this test case is to verify system is able to handle request to create group mapping successfully with Channel Id is used for for other group  failed, the actual result is different with expected result
+[2018-12-28 11:26:25]: [test_cases.py] [ERROR] [108] Common validation is fail, the expected result is 500, but the actual result is 200
+[2018-12-28 11:54:58]: [test_cases.py] [INFO] [106] Cases Fail ! createGroupMapping-04:this test case is to verify system is able to handle request to create group mapping successfully with necessary  with group id is not exist in DB failed, the actual result is different with expected result
+[2018-12-28 11:54:58]: [test_cases.py] [ERROR] [108] Common validation is fail, the expected result is 500, but the actual result is 200
+[2018-12-28 12:39:44]: [test_cases.py] [INFO] [106] Cases Fail ! createGroupMapping-05:this test case is to verify system is able to handle request to create group mapping successfully with necessary  with channel id is not exist in DB failed, the actual result is different with expected result
+[2018-12-28 12:39:44]: [test_cases.py] [ERROR] [108] Common validation is fail, the expected result is 500, but the actual result is 200
+[2018-12-28 13:06:05]: [test_cases.py] [INFO] [106] Cases Fail ! createGroupMapping-05:this test case is to verify system is able to handle request to create group mapping successfully with necessary  with channel id is not exist in DB failed, the actual result is different with expected result
+[2018-12-28 13:06:05]: [test_cases.py] [ERROR] [108] Common validation is fail, the expected result is 500, but the actual result is 200
+[2018-12-28 13:06:05]: [test_cases.py] [INFO] [106] Cases Fail ! createGroupMapping-07:this test case is to verify system is able to handle request to create group mapping successfullywith partial field only failed, the actual result is different with expected result
+[2018-12-28 13:06:05]: [test_cases.py] [ERROR] [108] Common validation is fail, the expected result is 500, but the actual result is 200
+[2018-12-28 13:10:28]: [test_cases.py] [INFO] [106] Cases Fail ! createGroupMapping-05:this test case is to verify system is able to handle request to create group mapping successfully with necessary  with channel id is not exist in DB failed, the actual result is different with expected result
+[2018-12-28 13:10:28]: [test_cases.py] [ERROR] [108] Common validation is fail, the expected result is 500, but the actual result is 200
+[2018-12-28 13:10:28]: [test_cases.py] [INFO] [106] Cases Fail ! createGroupMapping-08:this test case is to verify system is able to handle request to create group mapping successfully with necessary  with no body value  failed, the actual result is different with expected result
+[2018-12-28 13:10:28]: [test_cases.py] [ERROR] [108] Common validation is fail, the expected result is 500, but the actual result is 200
+[2018-12-28 13:12:05]: [test_cases.py] [INFO] [106] Cases Fail ! createGroupMapping-08:this test case is to verify system is able to handle request to create group mapping successfully with necessary  with no body value  failed, the actual result is different with expected result
+[2018-12-28 13:12:05]: [test_cases.py] [ERROR] [108] Common validation is fail, the expected result is 500, but the actual result is 200
+[2018-12-28 13:13:28]: [test_cases.py] [INFO] [106] Cases Fail ! createGroupMapping-09:this test case is to verify system is able to handle request to create group mapping successfully with necessary  with no body failed, the actual result is different with expected result
+[2018-12-28 13:13:28]: [test_cases.py] [ERROR] [108] Common validation is fail, the expected result is 500, but the actual result is 400
+[2018-12-28 15:23:20]: [test_cases.py] [INFO] [114] Cases Fail ! getAllChannels-01:this test case is to verify system is able to handle request to get all channel details successfully failed,  some error hit in test scripts, please contact QA team for more help!
+[2018-12-28 15:23:20]: [test_cases.py] [ERROR] [116] invalid literal for int() with base 10: ''
+Traceback (most recent call last):
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\cases\test_cases.py", line 97, in test_cases
+    comvalidation.common_validation(response, expected_statuscd)
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\validation\comvalidation.py", line 4, in common_validation
+    if response.httpstatuscd != int(expectedstatuscd):
+ValueError: invalid literal for int() with base 10: ''
+[2018-12-28 15:24:49]: [test_cases.py] [INFO] [114] Cases Fail ! getAllChannels-01:this test case is to verify system is able to handle request to get all channel details successfully failed,  some error hit in test scripts, please contact QA team for more help!
+[2018-12-28 15:24:49]: [test_cases.py] [ERROR] [116] invalid literal for int() with base 10: ''
+Traceback (most recent call last):
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\cases\test_cases.py", line 97, in test_cases
+    comvalidation.common_validation(response, expected_statuscd)
+  File "D:\IVH_Project\UMMI\API\Device\qa-ummi-device-service-testing\validation\comvalidation.py", line 4, in common_validation
+    if response.httpstatuscd != int(expectedstatuscd):
+ValueError: invalid literal for int() with base 10: ''
+[2018-12-28 16:53:35]: [test_cases.py] [INFO] [106] Cases Fail ! getAllChannels-06:this test case is to verify system is able to handle request to get all channel details successfully when  ino body value failed, the actual result is different with expected result
+[2018-12-28 16:53:35]: [test_cases.py] [ERROR] [108] Common validation is fail, the expected result is 400, but the actual result is 200
+[2018-12-28 16:55:50]: [test_cases.py] [INFO] [106] Cases Fail ! getAllChannels-06:this test case is to verify system is able to handle request to get all channel details successfully when  ino body value failed, the actual result is different with expected result
+[2018-12-28 16:55:50]: [test_cases.py] [ERROR] [108] Common validation is fail, the expected result is 400, but the actual result is 200
+[2018-12-28 16:58:16]: [test_cases.py] [INFO] [106] Cases Fail ! getAllChannels-06:this test case is to verify system is able to handle request to get all channel details successfully when  ino body value failed, the actual result is different with expected result
+[2018-12-28 16:58:16]: [test_cases.py] [ERROR] [108] Common validation is fail, the expected result is 400, but the actual result is 200
+[2018-12-28 17:29:13]: [test_cases.py] [INFO] [106] Cases Fail ! getAllChannels-06:this test case is to verify system is able to handle request to get all channel details successfully when  ino body value failed, the actual result is different with expected result
+[2018-12-28 17:29:13]: [test_cases.py] [ERROR] [108] Common validation is fail, the expected result is 400, but the actual result is 200
+[2018-12-28 17:30:29]: [test_cases.py] [INFO] [106] Cases Fail ! getparentGroups-06:this test case is to verify system is able to handle tampered data  in DB failed, the actual result is different with expected result
+[2018-12-28 17:30:29]: [test_cases.py] [ERROR] [108] Common validation is fail, the expected result is 500, but the actual result is 200
