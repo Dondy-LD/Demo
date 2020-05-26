@@ -20,9 +20,9 @@ def run_tests():
     subprocess.run(command_allure, shell=True)
     subprocess.run(command_td, shell=True)
     # subprocess.run(command, shell=True)
-    command_generate_report = "allure generate " + os.path.join(root_path, "allure_results") + " -o " + os.path.join(
-        root_path, "allure_report") + " --clean"
-    subprocess.run(command_generate_report, shell=True)
+    # command_generate_report = "allure generate " + os.path.join(root_path, "allure_results") + " -o " + os.path.join(
+    #     root_path, "allure_report") + " --clean"
+    # subprocess.run(command_generate_report, shell=True)
 
 
 if __name__ == "__main__":
