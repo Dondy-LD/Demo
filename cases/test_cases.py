@@ -1,3 +1,5 @@
+#! /usr/bin/env/python3
+# _*_coding:utf-8_*_
 import pytest
 import re
 from qalogger import log
@@ -9,6 +11,7 @@ from ncsqa import qadatabase
 from validation import comvalidation, specialvalidation
 
 mongodb_tc = qadatabase.MongoDB()
+
 
 # ========fixture=============
 def pytest_generate_tests(metafunc):

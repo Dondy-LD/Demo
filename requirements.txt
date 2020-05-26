@@ -10,7 +10,7 @@ pluggy==0.6.0
 py==1.5.3
 pymongo==3.6.1
 pymssql==2.1.4
-pytest==3.6.0
+pytest==3.6.4
 pytest-html==1.19.0
 pytest-metadata==1.7.0
 requests==2.18.4
